@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Minghao Qiu (邱明昊)"
+title                    : "Zhenjun Zhao (赵祯俊)"
 title_separator          : "-"
-name                     : &name "Minghao Qiu"
+name                     : &name "Zhenjun Zhao"
 description              : &description "Postdoctoral scholar at Stanford Univeristy"
 url                      : https://mhqiu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Minghao Qiu"
+  name             : "Zhenjun Zhao"
   avatar           : "Minghao_photo.jpeg"
   bio              : "Postdoc scholar at Stanford; researches air quality, energy transition, and climate"
   location         : 
