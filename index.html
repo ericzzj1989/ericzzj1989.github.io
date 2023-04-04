@@ -252,6 +252,45 @@
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
+        <tr onmouseout="vio_stop()" onmouseover="vio_start()">  
+          <td width="25%">
+            <div class="one">
+            <div class="two" id = 'vio_shape'>
+            <!-- <img src='media/dreamer_teaser.jpg' width="140" height="140"></p></div> -->
+            <script type="text/javascript">
+            function vio_start() { 
+            document.getElementById('vio_shape').style.opacity = "1";
+            }
+            function vio_stop() { 
+            document.getElementById('vio_shape').style.opacity = "0"; 
+            }
+            vio_stop()
+            </script>
+          </td>
+          <td valign="top" width="75%">
+              <a href="https://primecai.github.io/diffdreamer">
+                <papertitle>
+                  DiffDreamer: Consistent Single-view Perpetual View Generation with Conditional Diffusion Models
+                </papertitle>
+              </a>
+          <br>
+              <strong>Zhenjun Zhao</strong>,
+              <a href="http://www.mae.cuhk.edu.hk/~bmchen">Ben M. Chen</a>
+          <br>
+              <em>Chinese Control Conference (<strong>CCC</strong>)</em>, 2023
+            <br>
+            <a href="https://arxiv.org/abs/2211.12131">paper</a> |
+            <a href="https://primecai.github.io/diffdreamer">project page</a> 
+            <!-- <a href="https://youtu.be/V5hYTz5os0M">video</a> |
+            <a href="https://github.com/cvg/nice-slam">code</a> -->
+            <p></p>
+            A diffusion-model based unsupervised framework capable of synthesizing novel views depicting a long camera trajectory.
+            <p></p>
+          </td>
+        </tr>
+
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    
         <tr onmouseout="balf_stop()" onmouseover="balf_start()">  
           <td width="25%">
             <div class="one">
@@ -328,7 +367,7 @@
               <a href="https://people.inf.ethz.ch/pomarc/">Marc Pollefeys</a>,
               <a href="https://www.cs.princeton.edu/~funk/">Thomas Funkhouser</a> -->
           <br>
-          <em>International Conference on Robotics and Automation (ICRA) (<strong>ICRA</strong>)</em>, 2023
+          <em>International Conference on Robotics and Automation (<strong>ICRA</strong>)</em>, 2023
             <br>
             <a href="https://arxiv.org/abs/2302.08269">paper</a> |
             <!-- <a href="https://pengsongyou.github.io/openscene">project page</a> | -->
@@ -339,56 +378,6 @@
             <p></p>
           </td>
         </tr>  
-
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
-    
-          <tr onmouseout="dreamer_stop()" onmouseover="dreamer_start()">  
-            <td width="25%">
-              <div class="one">
-              <div class="two" id = 'dreamer_shape'>
-                <center>
-              <video  width="140" height="140" muted autoplay loop>
-                  <source src="media/dreamer_teaser.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                  </video></center></div>
-                  <p style="text-align:center;">
-              <img src='media/dreamer_teaser.jpg' width="140" height="140"></p></div>
-              <script type="text/javascript">
-              function dreamer_start() { 
-              document.getElementById('dreamer_shape').style.opacity = "1";
-              }
-              function dreamer_stop() { 
-              document.getElementById('dreamer_shape').style.opacity = "0"; 
-              }
-              dreamer_stop()
-              </script>
-            </td>
-            <td valign="top" width="75%">
-                <a href="https://primecai.github.io/diffdreamer">
-                  <papertitle>
-                    DiffDreamer: Consistent Single-view Perpetual View Generation with Conditional Diffusion Models
-                  </papertitle>
-                </a>
-            <br>
-                <a href="https://primecai.github.io/">Shengqu Cai</a>,
-                <a href="https://ericryanchan.github.io/">Eric R. Chan</a>, 
-                <strong>Songyou Peng</strong>, 
-                <a href="https://people.ee.ethz.ch/~mshahbazi/">Mohamad Shahbazi</a>, 
-                <a href="https://www.obukhov.ai/">Anton Obukhov</a>,
-                <a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html">Luc Van Gool</a>,
-                <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>
-            <br>
-                <em>arXiv</em>, 2022
-              <br>
-              <a href="https://arxiv.org/abs/2211.12131">paper</a> |
-              <a href="https://primecai.github.io/diffdreamer">project page</a> 
-              <!-- <a href="https://youtu.be/V5hYTz5os0M">video</a> |
-              <a href="https://github.com/cvg/nice-slam">code</a> -->
-              <p></p>
-              A diffusion-model based unsupervised framework capable of synthesizing novel views depicting a long camera trajectory.
-              <p></p>
-            </td>
-          </tr>
       
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
     
