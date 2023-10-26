@@ -226,6 +226,45 @@
       <!-- <td width="100%" valign="middle"> -->
       <heading>Research</heading>
       <!-- </td> -->
+
+        <tr onmouseout="balf_stop()" onmouseover="balf_start()">  
+          <td width="25%">
+            <div class="one">
+            <div class="two" id = 'balf_shape'>
+              <img src='media/balf_teaser.png' width="180" height="100"></p></div>
+              <img src='media/balf_teaser.png' width="180" height="100"></p></div>
+            <script type="text/javascript">
+            function balf_start() { 
+            document.getElementById('balf_shape').style.opacity = "1";
+            }
+            function balf_stop() { 
+            document.getElementById('balf_shape').style.opacity = "0"; 
+            }
+            balf_stop()
+            </script>
+          </td>
+          <td valign="top" width="75%">
+              <a href="https://arxiv.org/abs/2211.14731">
+                <papertitle>
+                  BALF: Simple and Efficient Blur Aware Local Feature Detector
+                </papertitle>
+              </a>
+          <br>
+              <strong>Zhenjun Zhao</strong>,
+              Yu Zhai,
+              <a href="http://www.mae.cuhk.edu.hk/~bmchen">Ben M. Chen</a>,
+              <a href="https://ethliup.github.io/">Peidong Liu</a>
+          <br>
+              <em>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2024
+            <br>
+            <a href="https://arxiv.org/abs/2211.14731">paper</a> |
+            <a href="">code (coming soon)</a>
+            <!-- <a href="https://l1346792580123.github.io/nccsfs/">project page</a>  -->
+            <p></p>
+            A simple yet both efficient and effective motion blur aware local feature detector.
+            <p></p>
+          </td>
+        </tr>
           
         <tr onmouseout="vio_stop()" onmouseover="vio_start()">  
           <td width="25%">
@@ -263,45 +302,6 @@
             <a href="https://github.com/cvg/nice-slam">code</a> -->
             <p></p>
             A novel benchmark for the evaluation of the initialization of visual-inertial odometry (VIO).
-            <p></p>
-          </td>
-        </tr>
-   
-        <tr onmouseout="balf_stop()" onmouseover="balf_start()">  
-          <td width="25%">
-            <div class="one">
-            <div class="two" id = 'balf_shape'>
-              <img src='media/balf_teaser.png' width="180" height="100"></p></div>
-              <img src='media/balf_teaser.png' width="180" height="100"></p></div>
-            <script type="text/javascript">
-            function balf_start() { 
-            document.getElementById('balf_shape').style.opacity = "1";
-            }
-            function balf_stop() { 
-            document.getElementById('balf_shape').style.opacity = "0"; 
-            }
-            balf_stop()
-            </script>
-          </td>
-          <td valign="top" width="75%">
-              <a href="https://arxiv.org/abs/2211.14731">
-                <papertitle>
-                  BALF: Simple and Efficient Blur Aware Local Feature Detector
-                </papertitle>
-              </a>
-          <br>
-              <strong>Zhenjun Zhao</strong>,
-              Yu Zhai,
-              <a href="http://www.mae.cuhk.edu.hk/~bmchen">Ben M. Chen</a>,
-              <a href="https://ethliup.github.io/">Peidong Liu</a>
-          <br>
-              <em>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2024
-            <br>
-            <a href="https://arxiv.org/abs/2211.14731">paper</a> |
-            <a href="">code (coming soon)</a>
-            <!-- <a href="https://l1346792580123.github.io/nccsfs/">project page</a>  -->
-            <p></p>
-            A simple yet both efficient and effective motion blur aware local feature detector.
             <p></p>
           </td>
         </tr>
