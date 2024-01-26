@@ -217,13 +217,28 @@
         <div class="content has-text-justified">
           <br>  
           <p>
-            <strong>The proposed network for motion blur aware local feature detector (BALF)</strong> Our network consists of two main modules: a multi-stage MLP-based encoder to extract an intermediate feature representation of the input image, and a MLP detection module to detect
+            <strong>The proposed network for motion blur aware local feature detector (BALF).</strong> Our network consists of two main modules: a multi-stage MLP-based encoder to extract an intermediate feature representation of the input image, and a MLP detection module to detect
             salient keypoints via a differentiable softmax operator.
           </p>
         </div>
       </div>
     </div>
-    <hr>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <hr>
+        <h2 class="title is-3">Method</h2>
+        <br>
+        <img src="media/balf/detection.png" class="center"/>
+        <div class="content has-text-justified">
+          <br>  
+          <p>
+            <strong>Detection module.</strong> The learned feature representations of the input image is processed by two channel-wise MLP blocks. The keypoints are then detected by using channel-wise softmax operation and mapped back to the original image domain.
+          </p>
+        </div>
+      </div>
+    </div>
+    
    
 </div>
 </section>
