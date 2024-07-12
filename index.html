@@ -184,7 +184,7 @@
         </tr>
       </table>
       <br>
-
+      <br>
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <heading>News</heading>
@@ -226,27 +226,70 @@
             </ul>
       </table>
       <br>
+      <br>
 
 
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <!-- <td width="100%" valign="middle"> -->
       <heading>Research</heading>
-      <!-- </td> -->
 
-        <tr onmouseout="DeDoDe_v2_stop()" onmouseover="DeDoDe_v2_start()">  
+        <tr onmouseout="globalpointer_stop()" onmouseover="globalpointer_start()">  
           <td width="25%">
             <div class="one">
-            <div class="two" id = 'DeDoDe_v2_shape'>
-              <img src='media/DeDoDe_v2_teaser.PNG' width="180" height="120"></p></div>
-              <img src='media/DeDoDe_v2_teaser.PNG' width="180" height="120"></p></div>
+            <div class="two" id = 'globalpointer_shape'>
+              <img src='media/globalpointer_output.jpg' width="160" height="124"></div>
+            <img src='media/globalpointer_input.jpg' width="160" height="124"></div>
             <script type="text/javascript">
-            function DeDoDe_v2_start() { 
-            document.getElementById('DeDoDe_v2_shape').style.opacity = "1";
+            function globalpointer_start() { 
+            document.getElementById('globalpointer_shape').style.opacity = "1";
             }
-            function DeDoDe_v2_stop() { 
-            document.getElementById('DeDoDe_v2_shape').style.opacity = "0"; 
+            function globalpointer_stop() { 
+            document.getElementById('globalpointer_shape').style.opacity = "0"; 
             }
-            DeDoDe_v2_stop()
+            globalpointer_stop()
+            </script>
+            </script>
+          </td>
+          <td valign="top" width="75%">
+              <a href="https://bangyan101.github.io/GlobalPointer/">
+                <papertitle>
+                  GlobalPointer: Large-Scale Plane Adjustment with Bi-Convex Relaxation
+                </papertitle>
+              </a>
+          <br>
+              <a href="https://bangyan101.github.io/">Bangyan Liao*</a>,
+              <strong>Zhenjun Zhao*</strong>,
+              <a href="https://chenlu-china.github.io/">Lu Chen</a>,
+              <a href="https://sites.google.com/view/haoangli/homepage">Haoang Li</a>,
+              <a href="https://cvg.cit.tum.de/members/cremers">Daniel Cremers</a>,
+              <a href="https://ethliup.github.io/">Peidong Liu</a>
+          <br>
+              <em>European Conference on Computer Vision (<strong>ECCV</strong>)</em>, 2024
+            <br>
+            <a href="">paper (TODO)</a> |
+            <a href="https://bangyan101.github.io/GlobalPointer/">project page (TODO)</a> |
+            <a href="https://bangyan101.github.io/GlobalPointer/">code (TODO)</a> |
+            <!-- <a href="https://youtu.be/H4cOCa3oUno?si=Vp60sexxbZIjwTMH">video</a> | -->
+            <!-- <a href="https://mix3d-demo.nekrasov.dev/segment3d/">demo</a> -->
+            <p></p>
+            A globally optimal and efficient large-scale plane adjustment, using alternating minimization and convex relaxation techniques.
+            <p></p>
+          </td>
+        </tr>
+
+        <tr onmouseout="dedodev2_stop()" onmouseover="dedodev2_start()">  
+          <td width="25%">
+            <div class="one">
+            <div class="two" id = 'dedodev2_shape'>
+              <img src='media/dedodev2_teaser.PNG' width="180" height="120"></p></div>
+              <img src='media/dedodev2_teaser.PNG' width="180" height="120"></p></div>
+            <script type="text/javascript">
+            function dedodev2_start() { 
+            document.getElementById('dedodev2_shape').style.opacity = "1";
+            }
+            function dedodev2_stop() { 
+            document.getElementById('dedodev2_shape').style.opacity = "0"; 
+            }
+            dedodev2_stop()
             </script>
           </td>
           <td valign="top" width="75%">
@@ -263,6 +306,7 @@
               <em>IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR) Workshop on Image Matching: Local Features & Beyond</em>, 2024
             <br>
             <a href="https://arxiv.org/abs/2404.08928">paper</a> |
+            <a href="files/cvprw24_dedodev2.pdf">slides</a> |
             <a href="https://github.com/Parskatt/DeDoDe">code</a>
             <!-- <a href="https://l1346792580123.github.io/nccsfs/">project page</a>  -->
             <p></p>
@@ -301,7 +345,7 @@
             <a href="https://arxiv.org/abs/2211.14731">paper</a> |
             <a href="https://ericzzj1989.github.io/balf">project page</a> |
             <a href="https://youtu.be/pSn80SS9mTM?si=fJPbDiHtIMrqiqSV">video</a> |
-            <a href="https://github.com/ericzzj1989/BALF">code (TODO)</a>
+            <a href="https://github.com/ericzzj1989/BALF">code</a>
             <!-- <a href="https://l1346792580123.github.io/nccsfs/">project page</a>  -->
             <p></p>
             A simple yet both efficient and effective motion blur aware local feature detector.
@@ -429,8 +473,7 @@
           <em>IEEE International Conference on Robotics and Automation (<strong>ICRA</strong>)</em>, 2023
             <br>
             <a href="https://arxiv.org/abs/2302.08269">paper</a> |
-            <!-- <a href="https://pengsongyou.github.io/openscene">project page</a> | -->
-            <!-- <a href="https://youtu.be/jZxCLHyDJf8">video</a> | -->
+            <a href="files/icra23_poster.pdf">poster</a> |
             <a href="https://github.com/RockWenJJ/SyreaNet">code</a>
             <p></p>
             A novel UIE framework combining both synthetic and real data under the guidance of the revised underwater image formation model and DA strategies.
@@ -438,6 +481,7 @@
           </td>
         </tr>
     </table>
+    <br>
     <br>
 
       <!-- Teaching -->
@@ -463,6 +507,7 @@
             </td>
           </tr>
       </table>
+      <br>
       <br>
 
       <!-- Academic Services -->
