@@ -195,7 +195,7 @@
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <heading>News</heading>
             <ul>
-              <li><strong>06/2025</strong> Our paper <a href=""><strong>TurboReg</strong></a> is accepted to <a href="https://iccv.thecvf.com/"><strong>ICCV 2025</strong></a>! Please stay tuned for more details!</li>
+              <li><strong>06/2025</strong> Our paper <a href="https://arxiv.org/abs/2507.01439"><strong>TurboReg</strong></a> is accepted to <a href="https://iccv.thecvf.com/"><strong>ICCV 2025</strong></a>!</li>
               <li><strong>06/2025</strong> Our paper <a href=""><strong>STG-Avatar</strong></a> is accepted to <a href="https://www.iros25.org/"><strong>IROS 2025</strong></a>! Please stay tuned for more details!</li>
               <li><strong>04/2025</strong> <a href="https://arxiv.org/abs/2505.04788"><strong>GlobustVP</strong></a> is nominated as <strong><span style="color:#c20000;">Best Paper Award Candidate</span></strong> by <a href="https://cvpr.thecvf.com/"><strong>CVPR 2025</strong></a>!</li>
               <li><strong>04/2025</strong> <b><span style="color:#c20000;">Career Update</span></b>: I start working as a postdoctoral researcher at <a href="https://www.unizar.es/"><strong>University of Zaragoza</strong></a>!</li>
@@ -217,19 +217,64 @@
 
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
       <heading>Research</heading>
+
+        <tr onmouseout="turboreg_stop()" onmouseover="turboreg_start()">  
+          <td width="25%">
+            <div class="one">
+            <div class="two" id = 'turboreg_shape'>
+              <img src='media/turboreg_teaser.png' width="160" height="124"></div>
+              <img src='media/turboreg_teaser.png' width="160" height="124"></div>
+            <script type="text/javascript">
+            function turboreg_start() { 
+            document.getElementById('turboreg_shape').style.opacity = "1";
+            }
+            function turboreg_stop() { 
+            document.getElementById('turboreg_shape').style.opacity = "0"; 
+            }
+            turboreg_stop()
+            </script>
+            </script>
+          </td>
+          <td valign="top" width="75%">
+              <a href="https://arxiv.org/abs/2507.01439">
+                <papertitle>
+                  TurboReg: TurboClique for Robust and Efficient Point Cloud Registration
+                </papertitle>
+              </a>
+          <br>
+              <a href="https://laka-3dv.github.io/">Shaocheng Yan</a>,
+              <a href="https://shipc-ai.github.io/">Pengcheng Shi</a>,
+              <strong>Zhenjun Zhao</strong>,
+              <a href="https://scholar.google.com/citations?user=33RAOskAAAAJ&hl=zh-CN">Kaixin Wang</a>,
+              <a href="https://orcid.org/0009-0008-1158-3316">Kuang Cao</a>,
+              <a href="https://github.com/MichaelWu99-lab">Ji Wu</a>,
+              <a href="https://ljy-rs.github.io/web/">Jiayuan Li</a>
+          <br>
+              <em>IEEE/CVF International Conference on Computer Vision (<strong>ICCV</strong>)</em>, 2025
+            <br>
+            <a href="https://arxiv.org/abs/2507.01439">paper</a> |
+             <!-- <a href="">slides</a> | -->
+            <!-- <a href="">video</a> | -->
+            <!-- <a href="">poster</a> | -->
+            <a href="https://github.com/Laka-3DV/TurboReg">code</a>
+            <p></p>
+            A highly efficient and robust point cloud registration method, supporting both CPU and GPU platforms.
+            <p></p>
+          </td>
+        </tr>
       
         <tr onmouseout="globustvp_stop()" onmouseover="globustvp_start()">  
           <td width="25%">
             <div class="one">
-            <div class="two" id = 'globalpointer_shape'>
+            <div class="two" id = 'globustvp_shape'>
               <img src='media/globustvp_output.png' width="160" height="124"></div>
               <img src='media/globustvp_input.png' width="160" height="124"></div>
             <script type="text/javascript">
             function globustvp_start() { 
-            document.getElementById('globalpointer_shape').style.opacity = "1";
+            document.getElementById('globustvp_shape').style.opacity = "1";
             }
             function globustvp_stop() { 
-            document.getElementById('globalpointer_shape').style.opacity = "0"; 
+            document.getElementById('globustvp_shape').style.opacity = "0"; 
             }
             globustvp_stop()
             </script>
@@ -292,7 +337,7 @@
               <a href="https://laka-3dv.github.io/">Shaocheng Yan</a>,
               <a href="https://yimingwangmingle.github.io/bio/">Yiming Wang</a>,
               <a href="https://kaiyanzhaophoenix.github.io/bio/">Kaiyan Zhao</a>,
-              <a href="https://www.researchgate.net/profile/Pengcheng-Shi-12/research">Pengcheng Shi</a>,
+              <a href="https://shipc-ai.github.io/">Pengcheng Shi</a>,
               <strong>Zhenjun Zhao</strong>,
               <a href="https://skyearth.org/zhangyj/">Yongjun Zhang</a>,
               <a href="https://ljy-rs.github.io/web/">Jiayuan Li</a>
@@ -314,7 +359,7 @@
           <td width="25%">
             <div class="one">
             <div class="two" id = 'globalpointer_shape'>
-              <img src='media/globalpointer_input.PNG' width="160" height="124"></div>
+              <img src='media/globalpointer_output.PNG' width="160" height="124"></div>
             <img src='media/globalpointer_input.PNG' width="160" height="124"></div>
             <script type="text/javascript">
             function globalpointer_start() { 
