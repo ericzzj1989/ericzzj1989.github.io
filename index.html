@@ -77,6 +77,32 @@
     span.highlight {
         background-color: #ffffd0;
     }
+    .video-preview-wrapper {
+      position: relative;
+      width: 180px;
+      height: 120px;
+    }
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 1;
+    }
+    .video-overlay video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .video-preview-image {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
   </style>
   <link rel="icon" type="image/png" href="media/preview.jpg">
   <title>Zhenjun Zhao - Homepage</title>
@@ -166,7 +192,6 @@
               }
               turboreg_stop()
             </script>
-            </script>
           </td>
           <td valign="top" width="75%">
             <a href="https://arxiv.org/abs/2507.01439">
@@ -207,7 +232,6 @@
                 document.getElementById('globustvp_shape').style.opacity = "0"; 
               }
               globustvp_stop()
-            </script>
             </script>
           </td>
           <td valign="top" width="75%">
@@ -254,7 +278,6 @@
               }
               hemora_stop()
             </script>
-            </script>
           </td>
           <td valign="top" width="75%">
             <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Yan_HeMoRa_Unsupervised_Heuristic_Consensus_Sampling_for_Robust_Point_Cloud_Registration_CVPR_2025_paper.html">
@@ -296,7 +319,6 @@
                 document.getElementById('globalpointer_shape').style.opacity = "0"; 
               }
               globalpointer_stop()
-            </script>
             </script>
           </td>
           <td valign="top" width="75%">
@@ -344,7 +366,6 @@
               }
               dedodev2_stop()
             </script>
-            </script>
           </td>
           <td valign="top" width="75%">
             <a href="https://arxiv.org/abs/2404.08928">
@@ -383,7 +404,6 @@
               }
               balf_stop()
             </script>
-            </script>
           </td>
           <td valign="top" width="75%">
             <a href="https://ericzzj1989.github.io/balf">
@@ -407,10 +427,9 @@
           </td>
         </tr>
           
-        <tr onmouseout="vio_stop()" onmouseover="vio_start()">  
+        <!-- <tr onmouseout="vio_stop()" onmouseover="vio_start()">  
           <td width="25%">
-            <div class="one" style="position: relative; width: 150px; height: 120px;">
-              <!-- 覆盖层：video -->
+            <div class="one" style="position: relative; width: 180px; height: 120px;">
               <div class="two" id="vio_shape"
                   style="position: absolute; top: 0; left: 0;
                           width: 100%; height: 100%;
@@ -421,8 +440,6 @@
                   <source src="media/vio_demo.mp4" type="video/mp4">
                 </video>
               </div>
-
-              <!-- 底图：img -->
               <img src="media/vio_teaser.png"
                   style="width: 100%; height: 100%; display: block;">
             </div>
@@ -454,8 +471,51 @@
             A novel benchmark for the evaluation of the initialization of visual-inertial odometry (VIO).
             <p></p>
           </td>
+        </tr> -->
+
+        <tr onmouseout="vio_stop()" onmouseover="vio_start()">  
+          <td width="25%">
+            <div class="video-preview-wrapper">
+              <div class="video-overlay" id="vio_shape">
+                <video muted autoplay loop playsinline>
+                  <source src="media/vio_demo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <img src="media/vio_teaser.png" class="video-preview-image">
+            </div>
+
+            <script type="text/javascript">
+              function vio_start() {
+                document.getElementById('vio_shape').style.opacity = "1";
+              }
+              function vio_stop() {
+                document.getElementById('vio_shape').style.opacity = "0";
+              }
+              vio_stop();
+            </script>
+          </td>
+
+          <td valign="top" width="75%">
+            <a href="https://ieeexplore.ieee.org/abstract/document/10240505">
+              <papertitle>
+                Benchmark for Evaluating Initialization of Visual-Inertial Odometry
+              </papertitle>
+            </a>
+            <br>
+            <strong>Zhenjun Zhao</strong>,
+            <a href="https://scholar.google.com/citations?user=utlWXV0AAAAJ&hl=en">Ben M. Chen</a>
+            <br>
+            <em>Chinese Control Conference (<strong>CCC</strong>)</em>, 2023
+            <br>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10240505">paper</a> |
+            <a href="https://github.com/ericzzj1989/vio_initialization_evaluation">code</a>
+            <p></p>
+            A novel benchmark for the evaluation of the initialization of visual-inertial odometry (VIO).
+            <p></p>
+          </td>
         </tr>
 
+        
         <tr onmouseout="hkworld_stop()" onmouseover="hkworld_start()">  
           <td width="25%">
             <div class="one">
@@ -472,7 +532,6 @@
                 document.getElementById('hkworld_shape').style.opacity = "0"; 
               }
               hkworld_stop()
-            </script>
             </script>
           </td>
           <td valign="top" width="75%">
@@ -517,7 +576,6 @@
                 document.getElementById('syreanet_shape').style.opacity = "0"; 
               }
               syreanet_stop()
-            </script>
             </script>
           </td>
           <td valign="top" width="75%">
