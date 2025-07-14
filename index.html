@@ -77,12 +77,12 @@
     span.highlight {
         background-color: #ffffd0;
     }
-    .video-preview-wrapper {
+    .preview-wrapper {
       position: relative;
       width: 180px;
       height: 120px;
     }
-    .video-overlay {
+    .preview-overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -92,13 +92,14 @@
       transition: opacity 0.3s;
       z-index: 1;
     }
-    .video-overlay video {
+    .preview-overlay img,
+    .preview-overlay video {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-    .video-preview-image {
+    .preview-image {
       width: 100%;
       height: 100%;
       display: block;
@@ -152,7 +153,9 @@
       <br>
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
         <heading>News</heading>
+
           <ul>
             <li><strong>06/2025</strong> Our paper <a href="https://arxiv.org/abs/2507.01439"><strong>TurboReg</strong></a> is accepted to <a href="https://iccv.thecvf.com/"><strong>ICCV 2025</strong></a>!</li>
             <li><strong>06/2025</strong> Our paper <a href=""><strong>STG-Avatar</strong></a> is accepted to <a href="https://www.iros25.org/"><strong>IROS 2025</strong></a>! Please stay tuned for more details!</li>
@@ -175,14 +178,18 @@
 
 
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      
       <heading>Research</heading>
 
         <tr onmouseout="turboreg_stop()" onmouseover="turboreg_start()">  
           <td width="25%">
-            <div class="one">
-            <div class="two" id = 'turboreg_shape'>
-              <img src='media/turboreg_output.png' width="180" height="120"></div>
-              <img src='media/turboreg_input.png' width="180" height="120"></div>
+            <div class="preview-wrapper">
+              <div class="preview-overlay" id="turboreg_shape">
+                <img src="media/turboreg_output.png">
+              </div>
+              <img src="media/turboreg_input.png" class="preview-image">
+            </div>
+
             <script type="text/javascript">
               function turboreg_start() { 
                 document.getElementById('turboreg_shape').style.opacity = "1";
@@ -193,6 +200,7 @@
               turboreg_stop()
             </script>
           </td>
+
           <td valign="top" width="75%">
             <a href="https://arxiv.org/abs/2507.01439">
               <papertitle>
@@ -220,10 +228,13 @@
       
         <tr onmouseout="globustvp_stop()" onmouseover="globustvp_start()">  
           <td width="25%">
-            <div class="one">
-            <div class="two" id = 'globustvp_shape'>
-              <img src='media/globustvp_output.png' width="180" height="120"></div>
-              <img src='media/globustvp_input.png' width="180" height="120"></div>
+            <div class="preview-wrapper">
+              <div class="preview-overlay" id="globustvp_shape">
+                <img src="media/globustvp_output.png">
+              </div>
+              <img src="media/globustvp_input.png" class="preview-image">
+            </div>
+
             <script type="text/javascript">
               function globustvp_start() { 
                 document.getElementById('globustvp_shape').style.opacity = "1";
@@ -234,6 +245,7 @@
               globustvp_stop()
             </script>
           </td>
+          
           <td valign="top" width="75%">
             <a href="https://arxiv.org/abs/2505.04788">
               <papertitle>
@@ -393,8 +405,8 @@
           <td width="25%">
             <div class="one">
             <div class="two" id = 'balf_shape'>
-              <img src='media/balf_teaser.png' width="180" height="120"></p></div>
-              <img src='media/balf_teaser.png' width="180" height="120"></p></div>
+              <img src='media/balf_teaser.png' width="180" height="100"></p></div>
+              <img src='media/balf_teaser.png' width="180" height="100"></p></div>
             <script type="text/javascript">
               function balf_start() { 
                 document.getElementById('balf_shape').style.opacity = "1";
@@ -429,13 +441,13 @@
           
         <tr onmouseout="vio_stop()" onmouseover="vio_start()">  
           <td width="25%">
-            <div class="video-preview-wrapper">
-              <div class="video-overlay" id="vio_shape">
+            <div class="preview-wrapper">
+              <div class="preview-overlay" id="vio_shape">
                 <video muted autoplay loop playsinline>
                   <source src="media/vio_demo.mp4" type="video/mp4">
                 </video>
               </div>
-              <img src="media/vio_teaser.png" class="video-preview-image">
+              <img src="media/vio_teaser.png" class="preview-image">
             </div>
             
             <script type="text/javascript">
@@ -513,13 +525,13 @@
     
         <tr onmouseout="syreanet_stop()" onmouseover="syreanet_start()">  
           <td width="25%">
-            <div class="video-preview-wrapper">
-              <div class="video-overlay" id="syreanet_shape">
+            <div class="preview-wrapper">
+              <div class="preview-overlay" id="syreanet_shape">
                 <video muted autoplay loop playsinline>
                   <source src="media/syreanet_demo.mp4" type="video/mp4">
                 </video>
               </div>
-              <img src="media/syreanet_teaser.png" class="video-preview-image">
+              <img src="media/syreanet_teaser.png" class="preview-image">
             </div>
 
             <script type="text/javascript">
