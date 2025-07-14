@@ -181,8 +181,8 @@
           <td width="25%">
             <div class="one">
             <div class="two" id = 'turboreg_shape'>
-              <img src='media/turboreg_output.png' width="160" height="124"></div>
-              <img src='media/turboreg_input.png' width="160" height="124"></div>
+              <img src='media/turboreg_output.png' width="180" height="120"></div>
+              <img src='media/turboreg_input.png' width="180" height="120"></div>
             <script type="text/javascript">
               function turboreg_start() { 
                 document.getElementById('turboreg_shape').style.opacity = "1";
@@ -222,8 +222,8 @@
           <td width="25%">
             <div class="one">
             <div class="two" id = 'globustvp_shape'>
-              <img src='media/globustvp_output.png' width="160" height="124"></div>
-              <img src='media/globustvp_input.png' width="160" height="124"></div>
+              <img src='media/globustvp_output.png' width="180" height="120"></div>
+              <img src='media/globustvp_input.png' width="180" height="120"></div>
             <script type="text/javascript">
               function globustvp_start() { 
                 document.getElementById('globustvp_shape').style.opacity = "1";
@@ -267,8 +267,8 @@
           <td width="25%">
             <div class="one">
             <div class="two" id = 'hemora_shape'>
-              <img src='media/hemora_output.png' width="160" height="124"></div>
-              <img src='media/hemora_input.png' width="160" height="124"></div>
+              <img src='media/hemora_output.png' width="180" height="120"></div>
+              <img src='media/hemora_input.png' width="180" height="120"></div>
             <script type="text/javascript">
               function hemora_start() { 
                 document.getElementById('hemora_shape').style.opacity = "1";
@@ -309,8 +309,8 @@
           <td width="25%">
             <div class="one">
             <div class="two" id = 'globalpointer_shape'>
-              <img src='media/globalpointer_output.png' width="160" height="124"></div>
-            <img src='media/globalpointer_input.png' width="160" height="124"></div>
+              <img src='media/globalpointer_output.png' width="180" height="120"></div>
+            <img src='media/globalpointer_input.png' width="180" height="120"></div>
             <script type="text/javascript">
               function globalpointer_start() { 
                 document.getElementById('globalpointer_shape').style.opacity = "1";
@@ -393,8 +393,8 @@
           <td width="25%">
             <div class="one">
             <div class="two" id = 'balf_shape'>
-              <img src='media/balf_teaser.png' width="180" height="100"></p></div>
-              <img src='media/balf_teaser.png' width="180" height="100"></p></div>
+              <img src='media/balf_teaser.png' width="180" height="120"></p></div>
+              <img src='media/balf_teaser.png' width="180" height="120"></p></div>
             <script type="text/javascript">
               function balf_start() { 
                 document.getElementById('balf_shape').style.opacity = "1";
@@ -427,52 +427,6 @@
           </td>
         </tr>
           
-        <!-- <tr onmouseout="vio_stop()" onmouseover="vio_start()">  
-          <td width="25%">
-            <div class="one" style="position: relative; width: 180px; height: 120px;">
-              <div class="two" id="vio_shape"
-                  style="position: absolute; top: 0; left: 0;
-                          width: 100%; height: 100%;
-                          opacity: 0;
-                          transition: opacity 0.3s;">
-                <video muted autoplay loop playsinline
-                      style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                  <source src="media/vio_demo.mp4" type="video/mp4">
-                </video>
-              </div>
-              <img src="media/vio_teaser.png"
-                  style="width: 100%; height: 100%; display: block;">
-            </div>
-            <script type="text/javascript">
-              function vio_start() { 
-                document.getElementById('vio_shape').style.opacity = "1";
-              }
-              function vio_stop() { 
-                document.getElementById('vio_shape').style.opacity = "0"; 
-              }
-              vio_stop()
-            </script>
-          </td>
-          <td valign="top" width="75%">
-            <a href="https://ieeexplore.ieee.org/abstract/document/10240505">
-              <papertitle>
-                Benchmark for Evaluating Initialization of Visual-Inertial Odometry
-              </papertitle>
-            </a>
-            <br>
-            <strong>Zhenjun Zhao</strong>,
-            <a href="https://scholar.google.com/citations?user=utlWXV0AAAAJ&hl=en">Ben M. Chen</a>
-            <br>
-              <em>Chinese Control Conference (<strong>CCC</strong>)</em>, 2023
-            <br>
-            <a href="https://ieeexplore.ieee.org/abstract/document/10240505">paper</a> |
-            <a href="https://github.com/ericzzj1989/vio_initialization_evaluation">code</a>
-            <p></p>
-            A novel benchmark for the evaluation of the initialization of visual-inertial odometry (VIO).
-            <p></p>
-          </td>
-        </tr> -->
-
         <tr onmouseout="vio_stop()" onmouseover="vio_start()">  
           <td width="25%">
             <div class="video-preview-wrapper">
@@ -483,15 +437,15 @@
               </div>
               <img src="media/vio_teaser.png" class="video-preview-image">
             </div>
-
+            
             <script type="text/javascript">
-              function vio_start() {
+              function vio_start() { 
                 document.getElementById('vio_shape').style.opacity = "1";
               }
-              function vio_stop() {
-                document.getElementById('vio_shape').style.opacity = "0";
+              function vio_stop() { 
+                document.getElementById('vio_shape').style.opacity = "0"; 
               }
-              vio_stop();
+              vio_stop()
             </script>
           </td>
 
@@ -514,8 +468,7 @@
             <p></p>
           </td>
         </tr>
-
-        
+  
         <tr onmouseout="hkworld_stop()" onmouseover="hkworld_start()">  
           <td width="25%">
             <div class="one">
@@ -560,14 +513,15 @@
     
         <tr onmouseout="syreanet_stop()" onmouseover="syreanet_start()">  
           <td width="25%">
-            <div class="one">
-              <div class="two" id = 'syreanet_shape'>
-                <video width="180" height="140" muted autoplay loop>
+            <div class="video-preview-wrapper">
+              <div class="video-overlay">
+                <video muted autoplay loop playsinline>
                   <source src="media/syreanet_demo.mp4" type="video/mp4">
                 </video>
               </div>
-              <img src='media/syreanet_teaser.png' width="160" height="120">
+              <img src="media/syreanet_teaser.png" class="video-preview-image">
             </div>
+
             <script type="text/javascript">
               function syreanet_start() { 
                 document.getElementById('syreanet_shape').style.opacity = "1";
@@ -578,6 +532,7 @@
               syreanet_stop()
             </script>
           </td>
+
           <td valign="top" width="75%">
             <a href="https://arxiv.org/abs/2302.08269">
               <papertitle>
