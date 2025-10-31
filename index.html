@@ -157,8 +157,9 @@
         <heading>News</heading>
 
           <ul>
+            <li><strong>07/2025</strong> Our paper <a href=""><strong>SLAM-X</strong></a> is accepted to <a href="https://acmmm2025.org/"><strong>ACM MM 2025</strong></a>!</li>
             <li><strong>06/2025</strong> Our paper <a href="https://arxiv.org/abs/2507.01439"><strong>TurboReg</strong></a> is accepted to <a href="https://iccv.thecvf.com/"><strong>ICCV 2025</strong></a>!</li>
-            <li><strong>06/2025</strong> Our paper <a href=""><strong>STG-Avatar</strong></a> is accepted to <a href="https://www.iros25.org/"><strong>IROS 2025</strong></a>! Please stay tuned for more details!</li>
+            <li><strong>06/2025</strong> Our paper <a href=""><strong>STG-Avatar</strong></a> is accepted to <a href="https://www.iros25.org/"><strong>IROS 2025</strong></a>!</li>
             <li><strong>04/2025</strong> <a href="https://arxiv.org/abs/2505.04788"><strong>GlobustVP</strong></a> is nominated as <strong><span style="color:#c20000;">Best Paper Award Candidate</span></strong> by <a href="https://cvpr.thecvf.com/"><strong>CVPR 2025</strong></a>!</li>
             <li><strong>04/2025</strong> <b><span style="color:#c20000;">Career Update</span></b>: I start working as a postdoctoral researcher at <a href="https://www.unizar.es/"><strong>University of Zaragoza</strong></a>!</li>
             <li><strong>02/2025</strong> Our papers <a href="https://arxiv.org/abs/2505.04788"><strong>GlobustVP</strong></a> and <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Yan_HeMoRa_Unsupervised_Heuristic_Consensus_Sampling_for_Robust_Point_Cloud_Registration_CVPR_2025_paper.html"><strong>HeMoRa</strong></a> are accepted to <a href="https://cvpr.thecvf.com/"><strong>CVPR 2025</strong></a>!</li>
@@ -180,6 +181,46 @@
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
       
       <heading>Research</heading>
+
+        <tr onmouseout="slamx_stop()" onmouseover="slamx_start()">  
+          <td width="25%">
+            <div class="one">
+            <div class="two" id='slamx_shape'>
+              <img src='media/slamx_output.png' width="180" height="120"></div>
+              <img src='media/slamx_input.png' width="180" height="120"></div>
+            <script type="text/javascript">
+              function slamx_start() { 
+                document.getElementById('slamx_shape').style.opacity = "1";
+              }
+              function slamx_stop() { 
+                document.getElementById('slamx_shape').style.opacity = "0"; 
+              }
+              slamx_stop()
+            </script>
+          </td>
+          <td valign="top" width="75%">
+            <a href="https://dl.acm.org/doi/abs/10.1145/3746027.3754971">
+              <papertitle>
+                SLAM-X: Generalizable Dynamic Removal for NeRF and Gaussian Splatting SLAM
+              </papertitle>
+            </a>
+            <br>
+            <a href="https://scholar.google.com/citations?user=l8tia5AAAAAJ&hl=zh-CN">Mingrui Li</a>,
+            <a href="https://doongli.github.io/">Dong Li</a>,
+            <a href="https://github.com/JennHash">Sijia Hu</a>,
+            <a href="https://orcid.org/0009-0005-2260-7772">Kangxu Wang</a>,
+            <strong>Zhenjun Zhao</strong>,
+            <a href="https://faculty.dlut.edu.cn/MMCL_WHY/en/more/726197/gzjlgd/">Hongyu Wang</a>
+            <br>
+            <em>ACM International Conference on Multimedia (<strong>ACM MM</strong>)</em>, 2025
+            <br>
+            <a href="https://dl.acm.org/doi/abs/10.1145/3746027.3754971">paper</a> |
+            <!-- <a href="">code</a> -->
+            <p></p>
+            A plug-and-play module for dynamic scene handling across diverse SLAM architectures
+            <p></p>
+          </td>
+        </tr>
 
         <tr onmouseout="turboreg_stop()" onmouseover="turboreg_start()">  
           <td width="25%">
