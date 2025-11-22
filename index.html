@@ -157,6 +157,7 @@
         <heading>News</heading>
 
           <ul>
+            <li><strong>11/2025</strong> Our paper <a href="https://arxiv.org/abs/2503.04079"><strong>SGS</strong></a> is accepted to <a href="https://wacv.thecvf.com/Conferences/2026"><strong>WACV 2026</strong></a>!</li>
             <li><strong>07/2025</strong> Our paper <a href=""><strong>SLAM-X</strong></a> is accepted to <a href="https://acmmm2025.org/"><strong>ACM MM 2025</strong></a>!</li>
             <li><strong>06/2025</strong> Our paper <a href="https://arxiv.org/abs/2507.01439"><strong>TurboReg</strong></a> is accepted to <a href="https://iccv.thecvf.com/"><strong>ICCV 2025</strong></a>!</li>
             <li><strong>06/2025</strong> Our paper <a href="https://arxiv.org/abs/2510.22140"><strong>STG-Avatar</strong></a> is accepted to <a href="https://www.iros25.org/"><strong>IROS 2025</strong></a>!</li>
@@ -164,9 +165,9 @@
             <li><strong>04/2025</strong> <b><span style="color:#c20000;">Career Update</span></b>: I start working as a postdoctoral researcher at <a href="https://www.unizar.es/"><strong>University of Zaragoza</strong></a>!</li>
             <li><strong>02/2025</strong> Our papers <a href="https://arxiv.org/abs/2505.04788"><strong>GlobustVP</strong></a> and <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Yan_HeMoRa_Unsupervised_Heuristic_Consensus_Sampling_for_Robust_Point_Cloud_Registration_CVPR_2025_paper.html"><strong>HeMoRa</strong></a> are accepted to <a href="https://cvpr.thecvf.com/"><strong>CVPR 2025</strong></a>!</li>
             <li><strong>07/2024</strong> Our paper <a href="https://bangyan101.github.io/GlobalPointer/"><strong>GlobalPointer</strong></a> is accepted to <a href="https://eccv2024.ecva.net/"><strong>ECCV 2024</strong></a>!</li>
-            <li><strong>04/2024</strong> Our paper <a href="https://arxiv.org/abs/2404.08928"><strong>DeDoDe v2</strong></a> is accepted to <a href="https://image-matching-workshop.github.io/"><strong>CVPR 2024 Workshop</strong></a>!</li>
             <a href="javascript:toggleblock(&#39;old_news&#39;)">---- show more ----</a>
             <div id="old_news" style="display: none;">
+              <li><strong>04/2024</strong> Our paper <a href="https://arxiv.org/abs/2404.08928"><strong>DeDoDe v2</strong></a> is accepted to <a href="https://image-matching-workshop.github.io/"><strong>CVPR 2024 Workshop</strong></a>!</li>
               <li><strong>10/2023</strong> Our paper <a href="https://ericzzj1989.github.io/balf"><strong>BALF</strong></a> is accepted to <a href="https://wacv2024.thecvf.com/"><strong>WACV 2024</strong></a>!</li>
               <li><strong>04/2023</strong> Our paper <a href="https://ieeexplore.ieee.org/abstract/document/10124374"><strong>Hong Kong World</strong></a> is accepted to <strong>TPAMI</strong>!</li>
               <li><strong>04/2023</strong> Our paper <a href="https://ieeexplore.ieee.org/abstract/document/10240505"><strong>Benchmark for Evaluating Initialization of Visual-Inertial Odometry</strong></a> is accepted to <a href="https://ccc2023en.nankai.edu.cn/"><strong>CCC 2023</strong></a>!</li>
@@ -181,6 +182,52 @@
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
       
       <heading>Research</heading>
+
+        <tr onmouseout="sgs_stop()" onmouseover="sgs_start()">  
+          <td width="25%">
+            <div class="preview-wrapper">
+              <div class="preview-overlay" id="vio_shape">
+                <video muted autoplay loop playsinline>
+                  <source src="media/sgs_demo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <img src="media/sgs_demo.png" class="preview-image">
+            </div>
+            <script type="text/javascript">
+              function sgs_start() { 
+                document.getElementById('sgs_shape').style.opacity = "1";
+              }
+              function sgs_stop() { 
+                document.getElementById('sgs_shape').style.opacity = "0"; 
+              }
+              sgs_stop()
+            </script>
+          </td>
+          <td valign="top" width="75%">
+            <a href="https://arxiv.org/abs/2503.04079">
+              <papertitle>
+                Surgical Gaussian Surfels: Highly Accurate Real-time Surgical Scene Rendering using Gaussian Surfels
+              </papertitle>
+            </a>
+            <br>
+            <a href="https://scholar.google.com/citations?user=BA0KydYAAAAJ&hl=en">Idris O. Sunmola</a>,
+            <strong>Zhenjun Zhao</strong>,
+            <a href="https://samuelschmidgall.github.io/">Samuel Schmidgall</a>,
+            <a href="https://www.linkedin.com/in/yumeng-wang-186539157/">Yumeng Wang</a>,
+            <a href="https://scheiklp.github.io/">Paul Maria Scheikl</a>,
+            <a href="https://cv.viet-pham.de/">Viet Pham</a>,
+            <a href="https://scholar.google.com/citations?user=ezJ0eHAAAAAJ&hl=en">Axel Krieger</a>
+            <br>
+            <em>IEEE/CVF Winter Conference on Applications of Computer Vision (<strong>WACV</strong>)</em>, 2026
+            <br>
+            <br>
+            <a href="https://arxiv.org/abs/2503.04079">paper</a>
+            <a href="https://github.com/aloma85/SurgicalGaussianSurfels">code</a>
+            <p></p>
+            A point-primitivebased rendering technique that combines surfels with 3D Gaussian Splatting to achieve high-fidelity reconstruction of dynamic surgical scenes.
+            <p></p>
+          </td>
+        </tr>
 
         <tr onmouseout="slamx_stop()" onmouseover="slamx_start()">  
           <td width="25%">
@@ -469,7 +516,7 @@
             <a href="https://georg-bn.github.io/">Georg Bökman</a>,
             <strong>Zhenjun Zhao</strong>
             <br>
-            <em>IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR) Workshop on Image Matching: Local Features & Beyond</em>, 2024
+            <em>IEEE/CVF Computer Vision and Pattern Recognition Conference (<strong>CVPR</strong>) Workshop on Image Matching: Local Features & Beyond</em>, 2024
             <br>
             <a href="https://arxiv.org/abs/2404.08928">paper</a> |
             <a href="files/dedodev2_slides.pdf">slides</a> |
@@ -505,7 +552,7 @@
             <br>
             <strong>Zhenjun Zhao</strong>
             <br>
-            <em>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2024
+            <em>IEEE/CVF Winter Conference on Applications of Computer Vision (<strong>WACV</strong>)</em>, 2024
             <br>
             <a href="https://openaccess.thecvf.com/content/WACV2024/html/Zhao_BALF_Simple_and_Efficient_Blur_Aware_Local_Feature_Detector_WACV_2024_paper.html">paper</a> |
             <a href="https://ericzzj1989.github.io/balf">project page</a> |
@@ -527,8 +574,7 @@
                 </video>
               </div>
               <img src="media/vio_teaser.png" class="preview-image">
-            </div>
-            
+            </div>   
             <script type="text/javascript">
               function vio_start() { 
                 document.getElementById('vio_shape').style.opacity = "1";
