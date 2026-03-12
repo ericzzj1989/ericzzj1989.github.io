@@ -1,291 +1,305 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-  <meta name="google-site-verification" content="xDNWUvx6Q5EWK5YYSyKvK8DZTmvXhKsGX203Ll-BFFE" >	
-  <meta name=viewport content=“width=800”>
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <style type="text/css">
-  @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300);
-  /* @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons); */
-    /* Color scheme stolen from Sergey Karayev */
-    a {
-    /*color: #b60a1c;*/
-    color: #1772d0;
-    /*color: #bd0a36;*/
-    text-decoration:none;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=800">
+  <meta name="google-site-verification" content="xDNWUvx6Q5EWK5YYSyKvK8DZTmvXhKsGX203Ll-BFFE">
+  <title>Zhenjun Zhao - Homepage</title>
+  <link rel="icon" type="image/png" href="media/preview.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: #333;
+      background: #fff;
     }
-    a:focus, a:hover {
-    color: #f09228;
-    text-decoration:none;
+
+    a { color: #1772d0; text-decoration: none; }
+    a:hover, a:focus { color: #f09228; }
+
+    strong { font-weight: 400; }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
-    body,td,th,tr,p,a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 300;
+
+    /* ── Bio section ── */
+    .bio {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      margin-bottom: 40px;
     }
-    strong {
-    font-family: 'Roboto', sans-serif;
-    /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
-    /*font-family: 'Avenir Next';*/
-    font-size: 15px;
-    font-weight: 400;
+    .bio-text { flex: 1; }
+    .bio-text h1 {
+      font-size: 32px;
+      font-weight: 400;
+      margin-bottom: 16px;
     }
-    heading {
-    /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
-    font-family: 'Roboto', sans-serif;
-    /*font-family: 'Avenir Next';*/
-    /*src: url("./fonts/Roboto_Mono_for_Powerline.ttf");*/
-    font-size: 24px;
-    font-weight: 400;
+    .bio-text p { margin-bottom: 12px; line-height: 1.6; }
+    .bio-links { margin-top: 12px; text-align: center; }
+    .bio-links a { margin: 0 6px; }
+    .bio-photo img { width: 160px; border-radius: 4px; }
+
+    /* ── Section headings ── */
+    h2 {
+      font-size: 22px;
+      font-weight: 400;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
     }
-    papertitle {
-    /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
-    font-family: 'Roboto', sans-serif;
-    /*font-family: 'Avenir Next';*/
-    /*src: url("./fonts/Roboto_Mono_for_Powerline.ttf");*/
-    font-size: 15px;
-    font-weight:500;
+
+    section { margin-bottom: 40px; }
+
+    /* ── News ── */
+    .news-list { list-style: none; padding: 0; }
+    .news-list li { padding: 5px 0; line-height: 1.5; }
+    .news-list li + li { border-top: 1px solid #f0f0f0; }
+
+    #show-more-news {
+      background: none;
+      border: none;
+      color: #1772d0;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 8px 0;
     }
-    name {
-    /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
-    font-family: 'Roboto', sans-serif;
-    /*font-family: 'Avenir Next';*/
-    font-weight: 400;
-    font-size: 32px;
+    #show-more-news:hover { color: #f09228; }
+
+    /* ── Paper filter tabs ── */
+    .pub-tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 28px;
+      border-bottom: 2px solid #e0e0e0;
     }
-    .one
-    {
-    width: 160px;
-    height: 140px;
-    position: relative;
+    .pub-tab {
+      padding: 8px 20px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 400;
+      color: #888;
+      border: none;
+      background: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: color 0.2s, border-color 0.2s;
     }
-    .two
-    {
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    transition: opacity .2s ease-in-out;
-    -moz-transition: opacity .2s ease-in-out;
-    -webkit-transition: opacity .2s ease-in-out;
+    .pub-tab:hover { color: #333; }
+    .pub-tab.active {
+      color: #1772d0;
+      border-bottom-color: #1772d0;
+      font-weight: 500;
     }
-    .fade {
-     transition: opacity .2s ease-in-out;
-     -moz-transition: opacity .2s ease-in-out;
-     -webkit-transition: opacity .2s ease-in-out;
+
+    /* ── Paper row ── */
+    .paper {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #f0f0f0;
     }
-    span.highlight {
-        background-color: #ffffd0;
-    }
-    .preview-wrapper {
+    .paper:last-child { border-bottom: none; }
+
+    .paper-thumb {
+      width: 160px;
+      flex-shrink: 0;
       position: relative;
-      width: 180px;
       height: 120px;
-    }
-    .preview-wrapper-vertical {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      padding-bottom: 120%;
       overflow: hidden;
     }
-    .preview-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 0.3s;
-      z-index: 1;
-    }
-    .preview-overlay img,
-    .preview-overlay video {
+    .paper-thumb img,
+    .paper-thumb video {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
+      border-radius: 3px;
     }
-    .preview-wrapper-vertical .preview-overlay video {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-    .preview-wrapper-vertical .preview-image {
+    .paper-thumb .thumb-hover {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .paper:hover .thumb-hover { opacity: 1; }
+
+    .paper-info { flex: 1; }
+    .paper-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 6px;
       display: block;
     }
-    .preview-image {
-      width: 100%;
-      height: 100%;
-      display: block;
+    .paper-title:hover { color: #1772d0; }
+    .paper-authors { margin-bottom: 5px; line-height: 1.5; color: #555; }
+    .paper-venue { margin-bottom: 8px; color: #555; font-style: italic; }
+    .highlight-award {
+      color: #c20000;
+      font-weight: 400;
+      font-style: normal;
     }
+    .paper-links a {
+      font-size: 14px;
+      margin-right: 10px;
+      color: #1772d0;
+    }
+    .paper-links a:hover { color: #f09228; }
+    .paper-desc { margin-top: 8px; font-size: 14px; color: #666; line-height: 1.5; }
+
+    /* paper hidden by filter */
+    .paper[data-selected="false"] { display: none; }
+
+    /* ── Teaching & Service ── */
+    .service-list { list-style: disc; padding-left: 22px; }
+    .service-list li { margin-bottom: 8px; line-height: 1.5; }
+    .teaching-row { display: flex; gap: 20px; align-items: flex-start; }
+    .teaching-row img { width: 100px; }
+    .teaching-list { list-style: none; padding: 0; }
+    .teaching-list li { margin-bottom: 6px; line-height: 1.5; }
+
+    /* ── Footer ── */
+    footer { text-align: right; font-size: 12px; color: #999; margin-top: 20px; }
+    footer a { color: #999; }
+    footer a:hover { color: #f09228; }
   </style>
-  <link rel="icon" type="image/png" href="media/preview.jpg">
-  <title>Zhenjun Zhao - Homepage</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <script src="script/functions.js"></script>
-  </head>
-  <body>
-  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tr>
-    <td>
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tr>
-        <td width="80%" valign="middle">
-        <p align="center">
-          <name>Zhenjun Zhao (赵祯俊)</name>
-        </p>
-        <p>
-          I am a postdoctoral researcher at <a href="https://www.unizar.es/"><strong>University of Zaragoza</strong></a>, working with 
-          <a href="https://scholar.google.com/citations?user=j_sMzokAAAAJ&hl=en">Javier Civera</a>.
-        </p> 
-        <p>
-          I received my PhD from <a href="https://cuhk.edu.hk/english/">Chinese University of Hong Kong (CUHK)</a>, 
-          under the supervision of <a href="https://www.mae.cuhk.edu.hk/~bmchen/">Ben M. Chen</a>. 
-        </p>
-        <p>
-          My current research focuses on geometric modeling and optimization in 3D computer vision, 
-          aiming to develop globally optimal and learning-augmented solutions for problems such as camera geometry estimation, Structure-from-Motion, SLAM, and visual localization.
-          My long-term research goal is to build intelligent visual systems that combine geometric reasoning, optimization, and continual learning to 
-          perceive and understand complex, dynamic 3D environments with high reliability and interpretability.
-        </p>
-        <p align=center>
-          <a href="mailto:ericzzj89@gmail.com">Email</a> &nbsp;/&nbsp;
-          <a href="https://scholar.google.com/citations?user=f5AEO48AAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
-          <a href="https://www.linkedin.com/in/zhenjun-zhao-513a3617b/"> LinkedIn</a> &nbsp;/&nbsp;
-          <a href="https://twitter.com/zhenjun_zhao">Twitter</a> &nbsp;/&nbsp;
-          <a href="https://bsky.app/profile/ericzzj.bsky.social">Bluesky</a> &nbsp;/&nbsp;
-          <a href="https://github.com/ericzzj1989">GitHub</a>
-        </p>
-        </td>
-        <td width="20%">
-          <img src="media/profile.jpg" width="250" alt="headshot">
-        </td>
-      </tr>
-      </table>
-      <br>
-      <br>
+</head>
+<body>
+<div class="container">
 
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <!-- ── Bio ── -->
+  <section class="bio">
+    <div class="bio-text">
+      <h1>Zhenjun Zhao (赵祯俊)</h1>
+      <p>
+        I am a postdoctoral researcher at <a href="https://www.unizar.es/"><strong>University of Zaragoza</strong></a>,
+        working with <a href="https://scholar.google.com/citations?user=j_sMzokAAAAJ&hl=en">Javier Civera</a>.
+      </p>
+      <p>
+        I received my PhD from the <a href="https://cuhk.edu.hk/english/">Chinese University of Hong Kong (CUHK)</a>,
+        under the supervision of <a href="https://www.mae.cuhk.edu.hk/~bmchen/">Ben M. Chen</a>.
+      </p>
+      <p>
+        My current research focuses on geometric modeling and optimization in 3D computer vision,
+        aiming to develop globally optimal and learning-augmented solutions for problems such as
+        camera geometry estimation, Structure-from-Motion, SLAM, and visual localization.
+        My long-term research goal is to build intelligent visual systems that combine geometric reasoning,
+        optimization, and continual learning to perceive and understand complex, dynamic 3D environments
+        with high reliability and interpretability.
+      </p>
+      <div class="bio-links">
+        <a href="mailto:ericzzj89@gmail.com">Email</a> &nbsp;/&nbsp;
+        <a href="https://scholar.google.com/citations?user=f5AEO48AAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
+        <a href="https://www.linkedin.com/in/zhenjun-zhao-513a3617b/">LinkedIn</a> &nbsp;/&nbsp;
+        <a href="https://twitter.com/zhenjun_zhao">Twitter</a> &nbsp;/&nbsp;
+        <a href="https://bsky.app/profile/ericzzj.bsky.social">Bluesky</a> &nbsp;/&nbsp;
+        <a href="https://github.com/ericzzj1989">GitHub</a>
+      </div>
+    </div>
+    <div class="bio-photo">
+      <img src="media/profile.jpg" alt="Zhenjun Zhao">
+    </div>
+  </section>
 
-        <heading>News</heading>
+  <!-- ── News ── -->
+  <section>
+    <h2>News</h2>
+    <ul class="news-list" id="news-list">
+      <li><strong>02/2026</strong> &nbsp; Our paper <a href=""><strong>ULF-Loc</strong></a> is accepted to <a href="https://cvpr.thecvf.com/Conferences/2026"><strong>CVPR 2026</strong></a>!</li>
+      <li><strong>01/2026</strong> &nbsp; Our paper <a href=""><strong>BlurPoint</strong></a> is accepted to <a href="https://2026.ieee-icra.org/"><strong>ICRA 2026</strong></a>!</li>
+      <li><strong>01/2026</strong> &nbsp; Our paper <a href="https://arxiv.org/abs/2602.03086"><strong>NPC</strong></a> is accepted to <a href="https://iclr.cc/Conferences/2026"><strong>ICLR 2026</strong></a>!</li>
+      <li><strong>11/2025</strong> &nbsp; Our paper <a href="https://arxiv.org/abs/2503.04079"><strong>SGS</strong></a> is accepted to <a href="https://wacv.thecvf.com/Conferences/2026"><strong>WACV 2026</strong></a>!</li>
+      <li><strong>07/2025</strong> &nbsp; Our paper <a href="https://dl.acm.org/doi/10.1145/3746027.3754971"><strong>SLAM-X</strong></a> is accepted to <a href="https://acmmm2025.org/"><strong>ACM MM 2025</strong></a>!</li>
+      <!-- older news, hidden initially -->
+      <li class="news-old" style="display:none"><strong>06/2025</strong> &nbsp; Our paper <a href="https://arxiv.org/abs/2507.01439"><strong>TurboReg</strong></a> is accepted to <a href="https://iccv.thecvf.com/Conferences/2025"><strong>ICCV 2025</strong></a>!</li>
+      <li class="news-old" style="display:none"><strong>06/2025</strong> &nbsp; Our paper <a href="https://arxiv.org/abs/2510.22140"><strong>STG-Avatar</strong></a> is accepted to <a href="https://www.iros25.org/"><strong>IROS 2025</strong></a>!</li>
+      <li class="news-old" style="display:none"><strong>04/2025</strong> &nbsp; <a href="https://arxiv.org/abs/2505.04788"><strong>GlobustVP</strong></a> is nominated as <strong><span class="highlight-award">Best Paper Award Candidate</span></strong> by <a href="https://cvpr.thecvf.com/Conferences/2025"><strong>CVPR 2025</strong></a>!</li>
+      <li class="news-old" style="display:none"><strong>04/2025</strong> &nbsp; <strong><span class="highlight-award">Career Update</span></strong>: I start working as a postdoctoral researcher at <a href="https://www.unizar.es/"><strong>University of Zaragoza</strong></a>!</li>
+      <li class="news-old" style="display:none"><strong>02/2025</strong> &nbsp; Our papers <a href="https://arxiv.org/abs/2505.04788"><strong>GlobustVP</strong></a> and <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Yan_HeMoRa_Unsupervised_Heuristic_Consensus_Sampling_for_Robust_Point_Cloud_Registration_CVPR_2025_paper.html"><strong>HeMoRa</strong></a> are accepted to <a href="https://cvpr.thecvf.com/Conferences/2025"><strong>CVPR 2025</strong></a>!</li>
+      <li class="news-old" style="display:none"><strong>07/2024</strong> &nbsp; Our paper <a href="https://bangyan101.github.io/GlobalPointer/"><strong>GlobalPointer</strong></a> is accepted to <a href="https://eccv2024.ecva.net/"><strong>ECCV 2024</strong></a>!</li>
+      <li class="news-old" style="display:none"><strong>04/2024</strong> &nbsp; Our paper <a href="https://arxiv.org/abs/2404.08928"><strong>DeDoDe v2</strong></a> is accepted to <a href="https://image-matching-workshop.github.io/"><strong>CVPR 2024 Workshop</strong></a>!</li>
+      <li class="news-old" style="display:none"><strong>10/2023</strong> &nbsp; Our paper <a href="https://ericzzj1989.github.io/balf"><strong>BALF</strong></a> is accepted to <a href="https://wacv2024.thecvf.com/"><strong>WACV 2024</strong></a>!</li>
+      <li class="news-old" style="display:none"><strong>04/2023</strong> &nbsp; Our paper <a href="https://ieeexplore.ieee.org/abstract/document/10124374"><strong>Hong Kong World</strong></a> is accepted to <strong>TPAMI</strong>!</li>
+      <li class="news-old" style="display:none"><strong>01/2023</strong> &nbsp; Our paper <a href="https://arxiv.org/abs/2302.08269"><strong>SyreaNet</strong></a> is accepted to <a href="https://www.icra2023.org/"><strong>ICRA 2023</strong></a>!</li>
+    </ul>
+    <button id="show-more-news" onclick="toggleNews()">▸ show more</button>
+  </section>
 
-          <ul>
-            <li><strong>02/2026</strong> Our paper <a href=""><strong>ULF-Loc</strong></a> is accepted to <a href="https://cvpr.thecvf.com/Conferences/2026"><strong>CVPR 2026</strong></a>! Please stay tuned for more details!</li>
-            <li><strong>01/2026</strong> Our paper <a href=""><strong>BlurPoint</strong></a> is accepted to <a href="https://2026.ieee-icra.org/"><strong>ICRA 2026</strong></a>! Please stay tuned for more details!</li>
-            <li><strong>01/2025</strong> Our paper <a href="https://arxiv.org/abs/2602.03086"><strong>NPC</strong></a> is accepted to <a href="https://iclr.cc/Conferences/2026"><strong>ICLR 2026</strong></a>!</li>
-            <li><strong>11/2025</strong> Our paper <a href="https://arxiv.org/abs/2503.04079"><strong>SGS</strong></a> is accepted to <a href="https://wacv.thecvf.com/Conferences/2026"><strong>WACV 2026</strong></a>!</li>
-            <li><strong>07/2025</strong> Our paper <a href="https://dl.acm.org/doi/10.1145/3746027.3754971"><strong>SLAM-X</strong></a> is accepted to <a href="https://acmmm2025.org/"><strong>ACM MM 2025</strong></a>!</li>
-            <li><strong>06/2025</strong> Our paper <a href="https://arxiv.org/abs/2507.01439"><strong>TurboReg</strong></a> is accepted to <a href="https://iccv.thecvf.com/Conferences/2025"><strong>ICCV 2025</strong></a>!</li>
-            <li><strong>06/2025</strong> Our paper <a href="https://arxiv.org/abs/2510.22140"><strong>STG-Avatar</strong></a> is accepted to <a href="https://www.iros25.org/"><strong>IROS 2025</strong></a>!</li>
-            <li><strong>04/2025</strong> <a href="https://arxiv.org/abs/2505.04788"><strong>GlobustVP</strong></a> is nominated as <strong><span style="color:#c20000;">Best Paper Award Candidate</span></strong> by <a href="https://cvpr.thecvf.com/Conferences/2025"><strong>CVPR 2025</strong></a>!</li>
-            <a href="javascript:toggleblock(&#39;old_news&#39;)">---- show more ----</a>
-            <div id="old_news" style="display: none;">
-              <li><strong>04/2025</strong> <b><span style="color:#c20000;">Career Update</span></b>: I start working as a postdoctoral researcher at <a href="https://www.unizar.es/"><strong>University of Zaragoza</strong></a>!</li>
-              <li><strong>02/2025</strong> Our papers <a href="https://arxiv.org/abs/2505.04788"><strong>GlobustVP</strong></a> and <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Yan_HeMoRa_Unsupervised_Heuristic_Consensus_Sampling_for_Robust_Point_Cloud_Registration_CVPR_2025_paper.html"><strong>HeMoRa</strong></a> are accepted to <a href="https://cvpr.thecvf.com/Conferences/2025"><strong>CVPR 2025</strong></a>!</li>
-              <li><strong>07/2024</strong> Our paper <a href="https://bangyan101.github.io/GlobalPointer/"><strong>GlobalPointer</strong></a> is accepted to <a href="https://eccv2024.ecva.net/"><strong>ECCV 2024</strong></a>!</li>
-              <li><strong>04/2024</strong> Our paper <a href="https://arxiv.org/abs/2404.08928"><strong>DeDoDe v2</strong></a> is accepted to <a href="https://image-matching-workshop.github.io/"><strong>CVPR 2024 Workshop</strong></a>!</li>
-              <li><strong>10/2023</strong> Our paper <a href="https://ericzzj1989.github.io/balf"><strong>BALF</strong></a> is accepted to <a href="https://wacv2024.thecvf.com/"><strong>WACV 2024</strong></a>!</li>
-              <li><strong>04/2023</strong> Our paper <a href="https://ieeexplore.ieee.org/abstract/document/10124374"><strong>Hong Kong World</strong></a> is accepted to <strong>TPAMI</strong>!</li>
-              <li><strong>04/2023</strong> Our paper <a href="https://ieeexplore.ieee.org/abstract/document/10240505"><strong>Benchmark for Evaluating Initialization of Visual-Inertial Odometry</strong></a> is accepted to <a href="https://ccc2023en.nankai.edu.cn/"><strong>CCC 2023</strong></a>!</li>
-              <li><strong>01/2023</strong> Our paper <a href="https://arxiv.org/abs/2302.08269"><strong>SyreaNet</strong></a> is accepted to <a href="https://www.icra2023.org/"><strong>ICRA 2023</strong></a>!</li>
-            </div>
-          </ul>
-      </table>
-      <br>
-      <br>
+  <!-- ── Research / Publications ── -->
+  <section>
+    <h2>Research</h2>
 
+    <!-- Tabs -->
+    <div class="pub-tabs">
+      <button class="pub-tab active" onclick="filterPapers('selected', this)">Selected Publications</button>
+      <button class="pub-tab" onclick="filterPapers('all', this)">All Publications</button>
+    </div>
 
-    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      
-      <heading>Research</heading>
+    <!-- Papers list -->
+    <div id="papers">
 
-        <tr onmouseout="npc_stop()" onmouseover="npc_start()">  
-          <td width="25%">
-            <div class="preview-wrapper-vertical">
-              <div class="preview-overlay" id="npc_shape">
-                <video muted autoplay loop playsinline>
-                  <source src="media/npc_demo.mp4" type="video/mp4">
-                </video>
-              </div>
-              <img src="media/npc_teaser.png" class="preview-image" alt="Neural Predictor-Corrector">
-            </div>
-            <script type="text/javascript">
-              function npc_start() { 
-                document.getElementById('npc_shape').style.opacity = "1";
-              }
-              function npc_stop() { 
-                document.getElementById('npc_shape').style.opacity = "0"; 
-              }
-              npc_stop()
-            </script>
-          </td>
-          <td valign="top" width="75%">
-            <a href="https://arxiv.org/abs/2602.03086">
-              <papertitle>
-                Neural Predictor-Corrector: Solving Homotopy Problems with Reinforcement Learning
-              </papertitle>
-            </a>
-            <br>
-            Jiayao Mai*,
+      <!-- NPC ✦ selected -->
+      <div class="paper" data-id="npc" data-selected="true">
+        <div class="paper-thumb">
+          <img src="media/npc_teaser.png" alt="NPC">
+          <div class="thumb-hover">
+            <video muted autoplay loop playsinline src="media/npc_demo.mp4"></video>
+          </div>
+        </div>
+        <div class="paper-info">
+          <a class="paper-title" href="https://arxiv.org/abs/2602.03086">
+            Neural Predictor-Corrector: Solving Homotopy Problems with Reinforcement Learning
+          </a>
+          <div class="paper-authors">
+            <a href="https://github.com/maijiayao1">Jiayao Mai</a>*,
             <a href="https://bangyan101.github.io/">Bangyan Liao</a>*,
             <strong>Zhenjun Zhao</strong>†,
-            Yingping Zeng,
+            <a href="https://www.linkedin.com/in/zengyingping/">Yingping Zeng</a>,
             <a href="https://sites.google.com/view/haoangli/homepage">Haoang Li</a>,
             <a href="https://scholar.google.es/citations?user=j_sMzokAAAAJ&hl=en">Javier Civera</a>,
             <a href="https://tailin.org/">Tailin Wu</a>,
             <a href="https://sites.google.com/view/zhouyi-joey/home">Yi Zhou</a>,
             <a href="https://ethliup.github.io/">Peidong Liu</a>
-            <br>
+          </div>
+          <div class="paper-venue">
             <em>International Conference on Learning Representations (<strong>ICLR</strong>)</em>, 2026
-            <br>
-            (* equal contribution;  † project lead)
-            <br>
-            <a href="https://arxiv.org/abs/2602.03086">paper</a> |
-            <a href="files/npc_slides.pdf">slides</a> |
-            <a href="https://youtu.be/YFjjphWs1ls">video</a> |
+            &nbsp;·&nbsp; <small>(* equal contribution; † project lead)</small>
+          </div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2602.03086">paper</a>
+            <a href="files/npc_slides.pdf">slides</a>
+            <a href="https://youtu.be/YFjjphWs1ls">video</a>
             <a href="https://github.com/maijiayao1/NPC">code</a>
-            <p></p>
+          </div>
+          <div class="paper-desc">
             The first unified framework for homotopy methods across robust optimization, global optimization, polynomial root-finding, and sampling, using reinforcement learning to automatically learn efficient solver policies.
-            <p></p>
-          </td>
-        </tr>
-      
-        <tr onmouseout="sgs_stop()" onmouseover="sgs_start()">  
-          <td width="25%">
-            <div class="preview-wrapper">
-              <div class="preview-overlay" id="sgs_shape">
-                <video muted autoplay loop playsinline>
-                  <source src="media/sgs_demo.mp4" type="video/mp4">
-                </video>
-              </div>
-              <img src="media/sgs_teaser.png" class="preview-image">
-            </div>
-            <script type="text/javascript">
-              function sgs_start() { 
-                document.getElementById('sgs_shape').style.opacity = "1";
-              }
-              function sgs_stop() { 
-                document.getElementById('sgs_shape').style.opacity = "0"; 
-              }
-              sgs_stop()
-            </script>
-          </td>
-          <td valign="top" width="75%">
-            <a href="https://arxiv.org/abs/2503.04079">
-              <papertitle>
-                Surgical Gaussian Surfels: Highly Accurate Real-time Surgical Scene Rendering using Gaussian Surfels
-              </papertitle>
-            </a>
-            <br>
+          </div>
+        </div>
+      </div>
+
+      <!-- SGS -->
+      <div class="paper" data-id="sgs" data-selected="false">
+        <div class="paper-thumb">
+          <img src="media/sgs_teaser.png" alt="SGS">
+          <div class="thumb-hover">
+            <video muted autoplay loop playsinline src="media/sgs_demo.mp4"></video>
+          </div>
+        </div>
+        <div class="paper-info">
+          <a class="paper-title" href="https://arxiv.org/abs/2503.04079">
+            Surgical Gaussian Surfels: Highly Accurate Real-time Surgical Scene Rendering using Gaussian Surfels
+          </a>
+          <div class="paper-authors">
             <a href="https://scholar.google.com/citations?user=BA0KydYAAAAJ&hl=en">Idris O. Sunmola</a>,
             <strong>Zhenjun Zhao</strong>,
             <a href="https://samuelschmidgall.github.io/">Samuel Schmidgall</a>,
@@ -293,214 +307,177 @@
             <a href="https://scheiklp.github.io/">Paul Maria Scheikl</a>,
             <a href="https://cv.viet-pham.de/">Viet Pham</a>,
             <a href="https://scholar.google.com/citations?user=ezJ0eHAAAAAJ&hl=en">Axel Krieger</a>
-            <br>
+          </div>
+          <div class="paper-venue">
             <em>IEEE/CVF Winter Conference on Applications of Computer Vision (<strong>WACV</strong>)</em>, 2026
-            <br>
-            <a href="https://arxiv.org/abs/2503.04079">paper</a> |
+          </div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2503.04079">paper</a>
             <a href="https://github.com/aloma85/SurgicalGaussianSurfels">code</a>
-            <p></p>
-            A point-primitivebased rendering technique that combines surfels with 3D Gaussian Splatting to achieve high-fidelity reconstruction of dynamic surgical scenes.
-            <p></p>
-          </td>
-        </tr>
+          </div>
+          <div class="paper-desc">
+            A point-primitive-based rendering technique that combines surfels with 3D Gaussian Splatting to achieve high-fidelity reconstruction of dynamic surgical scenes.
+          </div>
+        </div>
+      </div>
 
-        <tr onmouseout="slamx_stop()" onmouseover="slamx_start()">  
-          <td width="25%">
-            <div class="one">
-            <div class="two" id='slamx_shape'>
-              <img src='media/slamx_output.jpg' width="180" height="120"></div>
-              <img src='media/slamx_input.jpg' width="180" height="120"></div>
-            <script type="text/javascript">
-              function slamx_start() { 
-                document.getElementById('slamx_shape').style.opacity = "1";
-              }
-              function slamx_stop() { 
-                document.getElementById('slamx_shape').style.opacity = "0"; 
-              }
-              slamx_stop()
-            </script>
-          </td>
-          <td valign="top" width="75%">
-            <a href="https://dl.acm.org/doi/10.1145/3746027.3754971">
-              <papertitle>
-                SLAM-X: Generalizable Dynamic Removal for NeRF and Gaussian Splatting SLAM
-              </papertitle>
-            </a>
-            <br>
-            <a href="https://scholar.google.com/citations?user=l8tia5AAAAAJ&hl=zh-CN">Mingrui Li</a>*,
+      <!-- SLAM-X -->
+      <div class="paper" data-id="slamx" data-selected="false">
+        <div class="paper-thumb">
+          <img src="media/slamx_input.jpg" alt="SLAM-X">
+          <div class="thumb-hover">
+            <img src="media/slamx_output.jpg" alt="SLAM-X output">
+          </div>
+        </div>
+        <div class="paper-info">
+          <a class="paper-title" href="https://dl.acm.org/doi/10.1145/3746027.3754971">
+            SLAM-X: Generalizable Dynamic Removal for NeRF and Gaussian Splatting SLAM
+          </a>
+          <div class="paper-authors">
+            <a href="https://scholar.google.com/citations?user=l8tia5AAAAAA&hl=zh-CN">Mingrui Li</a>*,
             <a href="https://doongli.github.io/">Dong Li</a>*,
             <a href="https://github.com/JennHash">Sijia Hu</a>,
-            <a href="https://orcid.org/0009-0005-2260-7772">Kangxu Wang</a>,
+            <a href="https://www.linkedin.com/in/kangxu-wang-138328264/">Kangxu Wang</a>,
             <strong>Zhenjun Zhao</strong>,
             <a href="https://faculty.dlut.edu.cn/MMCL_WHY/en/more/726197/gzjlgd/">Hongyu Wang</a>
-            <br>
+          </div>
+          <div class="paper-venue">
             <em>ACM International Conference on Multimedia (<strong>ACM MM</strong>)</em>, 2025
-            <br>
-            (* equal contribution)
-            <br>
-            <a href="https://dl.acm.org/doi/10.1145/3746027.3754971">paper</a> |
-            <a href="https://github.com/user-attachments/assets/511c5911-9158-425c-a87e-ca107bbe068a">video</a> |
+            &nbsp;·&nbsp; <small>(* equal contribution)</small>
+          </div>
+          <div class="paper-links">
+            <a href="https://dl.acm.org/doi/10.1145/3746027.3754971">paper</a>
+            <a href="https://github.com/user-attachments/assets/511c5911-9158-425c-a87e-ca107bbe068a">video</a>
             <a href="https://github.com/DrLi-Ming/SLAM-X">code</a>
-            <p></p>
+          </div>
+          <div class="paper-desc">
             A plug-and-play module for dynamic scene handling across diverse SLAM architectures.
-            <p></p>
-          </td>
-        </tr>
+          </div>
+        </div>
+      </div>
 
-        <tr onmouseout="turboreg_stop()" onmouseover="turboreg_start()">  
-          <td width="25%">
-            <div class="one">
-            <div class="two" id='turboreg_shape'>
-              <img src='media/turboreg_output.png' width="180" height="120"></div>
-              <img src='media/turboreg_input.png' width="180" height="120"></div>
-            <script type="text/javascript">
-              function turboreg_start() { 
-                document.getElementById('turboreg_shape').style.opacity = "1";
-              }
-              function turboreg_stop() { 
-                document.getElementById('turboreg_shape').style.opacity = "0"; 
-              }
-              turboreg_stop()
-            </script>
-          </td>
-          <td valign="top" width="75%">
-            <a href="https://arxiv.org/abs/2507.01439">
-              <papertitle>
-                TurboReg: TurboClique for Robust and Efficient Point Cloud Registration
-              </papertitle>
-            </a>
-            <br>
+      <!-- TurboReg -->
+      <div class="paper" data-id="turboreg" data-selected="false">
+        <div class="paper-thumb">
+          <img src="media/turboreg_input.png" alt="TurboReg">
+          <div class="thumb-hover">
+            <img src="media/turboreg_output.png" alt="TurboReg output">
+          </div>
+        </div>
+        <div class="paper-info">
+          <a class="paper-title" href="https://arxiv.org/abs/2507.01439">
+            TurboReg: TurboClique for Robust and Efficient Point Cloud Registration
+          </a>
+          <div class="paper-authors">
             <a href="https://laka-3dv.github.io/">Shaocheng Yan</a>,
             <a href="https://shipc-ai.github.io/">Pengcheng Shi</a>,
             <strong>Zhenjun Zhao</strong>,
             <a href="https://scholar.google.com/citations?user=33RAOskAAAAJ&hl=zh-CN">Kaixin Wang</a>,
-            <a href="https://orcid.org/0009-0008-1158-3316">Kuang Cao</a>,
+            <a href="https://openreview.net/profile?id=~Kuang_Cao1">Kuang Cao</a>,
             <a href="https://github.com/MichaelWu99-lab">Ji Wu</a>,
             <a href="https://ljy-rs.github.io/web/">Jiayuan Li</a>
-            <br>
+          </div>
+          <div class="paper-venue">
             <em>IEEE/CVF International Conference on Computer Vision (<strong>ICCV</strong>)</em>, 2025
-            <br>
-            <a href="https://arxiv.org/abs/2507.01439">paper</a> |
+          </div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2507.01439">paper</a>
             <a href="https://github.com/Laka-3DV/TurboReg">code</a>
-            <p></p>
+          </div>
+          <div class="paper-desc">
             A highly efficient and robust point cloud registration method, supporting both CPU and GPU platforms.
-            <p></p>
-          </td>
-        </tr>
+          </div>
+        </div>
+      </div>
 
-        <tr onmouseout="stgavatar_stop()" onmouseover="stgavatar_start()">  
-          <td width="25%">
-            <div class="one">
-            <div class="two" id='stgavatar_shape'>
-              <img src='media/stgavatar_output.png' width="180" height="159"></div>
-              <img src='media/stgavatar_input.png' width="180" height="159"></div>
-            <script type="text/javascript">
-              function stgavatar_start() { 
-                document.getElementById('stgavatar_shape').style.opacity = "1";
-              }
-              function stgavatar_stop() { 
-                document.getElementById('stgavatar_shape').style.opacity = "0"; 
-              }
-              stgavatar_stop()
-            </script>
-          </td>
-          <td valign="top" width="75%">
-            <a href="https://arxiv.org/abs/2510.22140">
-              <papertitle>
-                STG-Avatar: Animatable Human Avatars via Spacetime Gaussian
-              </papertitle>
-            </a>
-            <br>
+      <!-- STG-Avatar -->
+      <div class="paper" data-id="stgavatar" data-selected="false">
+        <div class="paper-thumb">
+          <img src="media/stgavatar_input.png" alt="STG-Avatar">
+          <div class="thumb-hover">
+            <img src="media/stgavatar_output.png" alt="STG-Avatar output">
+          </div>
+        </div>
+        <div class="paper-info">
+          <a class="paper-title" href="https://arxiv.org/abs/2510.22140">
+            STG-Avatar: Animatable Human Avatars via Spacetime Gaussian
+          </a>
+          <div class="paper-authors">
             <a href="https://github.com/jiangguangan">Guangan Jiang</a>*,
-            <a href="">Tianzi Zhang</a>*,
+            <a href="https://dblp.org/search/pid/api?q=author:Tianzi_Zhang:">Tianzi Zhang</a>*,
             <a href="https://doongli.github.io/">Dong Li</a>,
             <strong>Zhenjun Zhao</strong>,
             <a href="https://sites.google.com/view/haoangli/homepage">Haoang Li</a>,
-            <a href="https://scholar.google.com/citations?user=l8tia5AAAAAJ&hl=zh-CN">Mingrui Li</a>,
+            <a href="https://scholar.google.com/citations?user=l8tia5AAAAAA&hl=zh-CN">Mingrui Li</a>,
             <a href="https://faculty.dlut.edu.cn/MMCL_WHY/en/more/726197/gzjlgd/">Hongyu Wang</a>
-            <br>
+          </div>
+          <div class="paper-venue">
             <em>IEEE/RSJ International Conference on Intelligent Robots and Systems (<strong>IROS</strong>)</em>, 2025
-            <br>
-            (* equal contribution)
-            <br>
-            <a href="https://arxiv.org/abs/2510.22140">paper</a> |
-            <a href="https://youtu.be/Weo0zT-5YSo">video</a> |
+            &nbsp;·&nbsp; <small>(* equal contribution)</small>
+          </div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2510.22140">paper</a>
+            <a href="https://youtu.be/Weo0zT-5YSo">video</a>
             <a href="https://github.com/jiangguangan/STG-Avatar">code</a>
-            <p></p>
+          </div>
+          <div class="paper-desc">
             3DGS-based framework for high-fidelity animatable human avatar reconstruction.
-            <p></p>
-          </td>
-        </tr>
-      
-        <tr onmouseout="globustvp_stop()" onmouseover="globustvp_start()">  
-          <td width="25%">
-            <div class="one">
-            <div class="two" id = 'globustvp_shape'>
-              <img src='media/globustvp_output.png' width="180" height="120"></div>
-              <img src='media/globustvp_input.png' width="180" height="120"></div>
-            <script type="text/javascript">
-              function globustvp_start() { 
-                document.getElementById('globustvp_shape').style.opacity = "1";
-              }
-              function globustvp_stop() { 
-                document.getElementById('globustvp_shape').style.opacity = "0"; 
-              }
-              globustvp_stop()
-            </script>
-          </td>
-          <td valign="top" width="75%">
-            <a href="https://arxiv.org/abs/2505.04788">
-              <papertitle>
-                Convex Relaxation for Robust Vanishing Point Estimation in Manhattan World
-              </papertitle>
-            </a>
-            <br>
+          </div>
+        </div>
+      </div>
+
+      <!-- GlobustVP ✦ selected -->
+      <div class="paper" data-id="globustvp" data-selected="true">
+        <div class="paper-thumb">
+          <img src="media/globustvp_input.png" alt="GlobustVP">
+          <div class="thumb-hover">
+            <img src="media/globustvp_output.png" alt="GlobustVP output">
+          </div>
+        </div>
+        <div class="paper-info">
+          <a class="paper-title" href="https://arxiv.org/abs/2505.04788">
+            Convex Relaxation for Robust Vanishing Point Estimation in Manhattan World
+          </a>
+          <div class="paper-authors">
             <a href="https://bangyan101.github.io/">Bangyan Liao</a>*,
-            <strong>Zhenjun Zhao*</strong>,
+            <strong>Zhenjun Zhao</strong>*,
             <a href="https://sites.google.com/view/haoangli/homepage">Haoang Li</a>,
             <a href="https://sites.google.com/view/zhouyi-joey/home">Yi Zhou</a>,
-            Yingping Zeng,
-            Hao Li,
+            <a href="https://www.linkedin.com/in/zengyingping/">Yingping Zeng</a>,
+            <a href="https://github.com/Lucas898089">Hao Li</a>,
             <a href="https://ethliup.github.io/">Peidong Liu</a>
-            <br>
-            <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>)</em>, 2025 (<b><span style="color:#c20000;">Oral, Best Paper Award Candidate</span>, top 0.48%</b>)
-            <br>
-            (* equal contribution)
-            <br>
-            <a href="https://arxiv.org/abs/2505.04788">paper</a> |
-            <a href="files/globustvp_slides.pdf">slides</a> |
-            <a href="https://youtu.be/q51jp4Px3Kg">video</a> |
-            <a href="files/globustvp_poster.pdf">poster</a> |
+          </div>
+          <div class="paper-venue">
+            <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>)</em>, 2025
+            &nbsp;·&nbsp; <span class="highlight-award">Oral &amp; Best Paper Award Candidate (top 0.48%)</span>
+            &nbsp;·&nbsp; <small>(* equal contribution)</small>
+          </div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2505.04788">paper</a>
+            <a href="files/globustvp_slides.pdf">slides</a>
+            <a href="https://youtu.be/q51jp4Px3Kg">video</a>
+            <a href="files/globustvp_poster.pdf">poster</a>
             <a href="https://github.com/wu-cvgl/GlobustVP">code</a>
-            <p></p>
-            A globally optimal and outlier-robust method for vanishing point (VP) estimation in a Manhattan world, using convex relaxation techniques.
-            <p></p>
-          </td>
-        </tr>
+          </div>
+          <div class="paper-desc">
+            A globally optimal and outlier-robust method for vanishing point estimation in a Manhattan world, using convex relaxation techniques.
+          </div>
+        </div>
+      </div>
 
-        <tr onmouseout="hemora_stop()" onmouseover="hemora_start()">  
-          <td width="25%">
-            <div class="one">
-            <div class="two" id = 'hemora_shape'>
-              <img src='media/hemora_output.png' width="180" height="120"></div>
-              <img src='media/hemora_input.png' width="180" height="120"></div>
-            <script type="text/javascript">
-              function hemora_start() { 
-                document.getElementById('hemora_shape').style.opacity = "1";
-              }
-              function hemora_stop() { 
-                document.getElementById('hemora_shape').style.opacity = "0"; 
-              }
-              hemora_stop()
-            </script>
-          </td>
-          <td valign="top" width="75%">
-            <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Yan_HeMoRa_Unsupervised_Heuristic_Consensus_Sampling_for_Robust_Point_Cloud_Registration_CVPR_2025_paper.html">
-              <papertitle>
-                HeMoRa: Unsupervised Heuristic Consensus Sampling for Robust Point Cloud Registration
-              </papertitle>
-            </a>
-            <br>
+      <!-- HeMoRa -->
+      <div class="paper" data-id="hemora" data-selected="false">
+        <div class="paper-thumb">
+          <img src="media/hemora_input.png" alt="HeMoRa">
+          <div class="thumb-hover">
+            <img src="media/hemora_output.png" alt="HeMoRa output">
+          </div>
+        </div>
+        <div class="paper-info">
+          <a class="paper-title" href="https://openaccess.thecvf.com/content/CVPR2025/html/Yan_HeMoRa_Unsupervised_Heuristic_Consensus_Sampling_for_Robust_Point_Cloud_Registration_CVPR_2025_paper.html">
+            HeMoRa: Unsupervised Heuristic Consensus Sampling for Robust Point Cloud Registration
+          </a>
+          <div class="paper-authors">
             <a href="https://laka-3dv.github.io/">Shaocheng Yan</a>,
             <a href="https://yimingwangmingle.github.io/bio/">Yiming Wang</a>,
             <a href="https://kaiyanzhaophoenix.github.io/bio/">Kaiyan Zhao</a>,
@@ -508,208 +485,163 @@
             <strong>Zhenjun Zhao</strong>,
             <a href="https://skyearth.org/zhangyj/">Yongjun Zhang</a>,
             <a href="https://ljy-rs.github.io/web/">Jiayuan Li</a>
-            <br>
+          </div>
+          <div class="paper-venue">
             <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>)</em>, 2025
-            <br>
-            <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Yan_HeMoRa_Unsupervised_Heuristic_Consensus_Sampling_for_Robust_Point_Cloud_Registration_CVPR_2025_paper.html">paper</a> |
-            <a href="files/hemora_poster.pdf">poster</a> |
+          </div>
+          <div class="paper-links">
+            <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Yan_HeMoRa_Unsupervised_Heuristic_Consensus_Sampling_for_Robust_Point_Cloud_Registration_CVPR_2025_paper.html">paper</a>
+            <a href="files/hemora_poster.pdf">poster</a>
             <a href="https://github.com/Laka-3DV/HeMoRa">code</a>
-            <p></p>
-            A learnable sampling probability distribution for matches in robust estimation, no supervision and reinforcement-inspired.
-            <p></p>
-          </td>
-        </tr>
+          </div>
+          <div class="paper-desc">
+            A learnable sampling probability distribution for matches in robust estimation, supervision-free and reinforcement-inspired.
+          </div>
+        </div>
+      </div>
 
-        <tr onmouseout="globalpointer_stop()" onmouseover="globalpointer_start()">  
-          <td width="25%">
-            <div class="one">
-            <div class="two" id = 'globalpointer_shape'>
-              <img src='media/globalpointer_output.png' width="180" height="120"></div>
-            <img src='media/globalpointer_input.png' width="180" height="120"></div>
-            <script type="text/javascript">
-              function globalpointer_start() { 
-                document.getElementById('globalpointer_shape').style.opacity = "1";
-              }
-              function globalpointer_stop() { 
-                document.getElementById('globalpointer_shape').style.opacity = "0"; 
-              }
-              globalpointer_stop()
-            </script>
-          </td>
-          <td valign="top" width="75%">
-            <a href="https://arxiv.org/abs/2407.13537">
-              <papertitle>
-                GlobalPointer: Large-Scale Plane Adjustment with Bi-Convex Relaxation
-              </papertitle>
-            </a>
-            <br>
+      <!-- GlobalPointer ✦ selected -->
+      <div class="paper" data-id="globalpointer" data-selected="true">
+        <div class="paper-thumb">
+          <img src="media/globalpointer_input.png" alt="GlobalPointer">
+          <div class="thumb-hover">
+            <img src="media/globalpointer_output.png" alt="GlobalPointer output">
+          </div>
+        </div>
+        <div class="paper-info">
+          <a class="paper-title" href="https://arxiv.org/abs/2407.13537">
+            GlobalPointer: Large-Scale Plane Adjustment with Bi-Convex Relaxation
+          </a>
+          <div class="paper-authors">
             <a href="https://bangyan101.github.io/">Bangyan Liao</a>*,
-            <strong>Zhenjun Zhao*</strong>,
+            <strong>Zhenjun Zhao</strong>*,
             <a href="https://chenlu-china.github.io/">Lu Chen</a>,
             <a href="https://sites.google.com/view/haoangli/homepage">Haoang Li</a>,
             <a href="https://cvg.cit.tum.de/members/cremers">Daniel Cremers</a>,
             <a href="https://ethliup.github.io/">Peidong Liu</a>
-            <br>
+          </div>
+          <div class="paper-venue">
             <em>European Conference on Computer Vision (<strong>ECCV</strong>)</em>, 2024
-            <br>
-            (* equal contribution)
-            <br>
-            <a href="https://arxiv.org/abs/2407.13537">paper</a> |
-            <a href="https://bangyan101.github.io/GlobalPointer/">project page</a> |
-            <a href="files/globalpointer_slides.pdf">slides</a> |
-            <a href="https://youtu.be/XfB6DaI7EQ4">video</a> |
-            <a href="files/globalpointer_poster.pdf">poster</a> |
+            &nbsp;·&nbsp; <small>(* equal contribution)</small>
+          </div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2407.13537">paper</a>
+            <a href="https://bangyan101.github.io/GlobalPointer/">project page</a>
+            <a href="files/globalpointer_slides.pdf">slides</a>
+            <a href="https://youtu.be/XfB6DaI7EQ4">video</a>
+            <a href="files/globalpointer_poster.pdf">poster</a>
             <a href="https://github.com/wu-cvgl/GlobalPointer">code</a>
-            <p></p>
+          </div>
+          <div class="paper-desc">
             A globally optimal and efficient large-scale plane adjustment, using alternating minimization and convex relaxation techniques.
-            <p></p>
-          </td>
-        </tr>
+          </div>
+        </div>
+      </div>
 
-        <tr onmouseout="dedodev2_stop()" onmouseover="dedodev2_start()">  
-          <td width="25%">
-            <div class="one">
-              <div class="two" id = 'dedodev2_shape'>
-                <img src='media/dedodev2_teaser.png' width="180" height="120"></p>
-              </div>
-              <img src='media/dedodev2_teaser.png' width="180" height="120"></p>
-            </div>
-            <script type="text/javascript">
-              function dedodev2_start() { 
-                document.getElementById('dedodev2_shape').style.opacity = "1";
-              }
-              function dedodev2_stop() { 
-                document.getElementById('dedodev2_shape').style.opacity = "0"; 
-              }
-              dedodev2_stop()
-            </script>
-          </td>
-          <td valign="top" width="75%">
-            <a href="https://arxiv.org/abs/2404.08928">
-              <papertitle>
-                DeDoDe v2: Analyzing and Improving the DeDoDe Keypoint Detector
-              </papertitle>
-            </a>
-            <br>
+      <!-- DeDoDe v2 -->
+      <div class="paper" data-id="dedodev2" data-selected="false">
+        <div class="paper-thumb">
+          <img src="media/dedodev2_teaser.png" alt="DeDoDe v2">
+          <div class="thumb-hover">
+            <img src="media/dedodev2_teaser.png" alt="DeDoDe v2">
+          </div>
+        </div>
+        <div class="paper-info">
+          <a class="paper-title" href="https://arxiv.org/abs/2404.08928">
+            DeDoDe v2: Analyzing and Improving the DeDoDe Keypoint Detector
+          </a>
+          <div class="paper-authors">
             <a href="https://johanedstedt.com/">Johan Edstedt</a>,
             <a href="https://georg-bn.github.io/">Georg Bökman</a>,
             <strong>Zhenjun Zhao</strong>
-            <br>
-            <em>IEEE/CVF Computer Vision and Pattern Recognition Conference (<strong>CVPR</strong>) Workshop on Image Matching: Local Features & Beyond</em>, 2024
-            <br>
-            <a href="https://arxiv.org/abs/2404.08928">paper</a> |
-            <a href="files/dedodev2_slides.pdf">slides</a> |
+          </div>
+          <div class="paper-venue">
+            <em>IEEE/CVF CVPR Workshop on Image Matching: Local Features &amp; Beyond</em>, 2024
+          </div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2404.08928">paper</a>
+            <a href="files/dedodev2_slides.pdf">slides</a>
             <a href="https://github.com/Parskatt/DeDoDe">code</a>
-            <p></p>
+          </div>
+          <div class="paper-desc">
             An improved keypoint detector built on top of DeDoDe.
-            <p></p>
-          </td>
-        </tr>
+          </div>
+        </div>
+      </div>
 
-        <tr onmouseout="balf_stop()" onmouseover="balf_start()">  
-          <td width="25%">
-            <div class="one">
-            <div class="two" id = 'balf_shape'>
-              <img src='media/balf_output.png' width="180" height="100"></p></div>
-              <img src='media/balf_input.png' width="180" height="100"></p></div>
-            <script type="text/javascript">
-              function balf_start() { 
-                document.getElementById('balf_shape').style.opacity = "1";
-              }
-              function balf_stop() { 
-                document.getElementById('balf_shape').style.opacity = "0"; 
-              }
-              balf_stop()
-            </script>
-          </td>
-          <td valign="top" width="75%">
-            <a href="https://ericzzj1989.github.io/balf">
-              <papertitle>
-                BALF: Simple and Efficient Blur Aware Local Feature Detector
-              </papertitle>
-            </a>
-            <br>
+      <!-- BALF ✦ selected -->
+      <div class="paper" data-id="balf" data-selected="true">
+        <div class="paper-thumb">
+          <img src="media/balf_input.png" alt="BALF">
+          <div class="thumb-hover">
+            <img src="media/balf_output.png" alt="BALF output">
+          </div>
+        </div>
+        <div class="paper-info">
+          <a class="paper-title" href="https://ericzzj1989.github.io/balf">
+            BALF: Simple and Efficient Blur Aware Local Feature Detector
+          </a>
+          <div class="paper-authors">
             <strong>Zhenjun Zhao</strong>
-            <br>
+          </div>
+          <div class="paper-venue">
             <em>IEEE/CVF Winter Conference on Applications of Computer Vision (<strong>WACV</strong>)</em>, 2024
-            <br>
-            <a href="https://openaccess.thecvf.com/content/WACV2024/html/Zhao_BALF_Simple_and_Efficient_Blur_Aware_Local_Feature_Detector_WACV_2024_paper.html">paper</a> |
-            <a href="https://ericzzj1989.github.io/balf">project page</a> |
-            <a href="files/balf_slides.pdf">slides</a> |
-            <a href="https://youtu.be/pSn80SS9mTM">video</a> |
+          </div>
+          <div class="paper-links">
+            <a href="https://openaccess.thecvf.com/content/WACV2024/html/Zhao_BALF_Simple_and_Efficient_Blur_Aware_Local_Feature_Detector_WACV_2024_paper.html">paper</a>
+            <a href="https://ericzzj1989.github.io/balf">project page</a>
+            <a href="files/balf_slides.pdf">slides</a>
+            <a href="https://youtu.be/pSn80SS9mTM">video</a>
             <a href="https://github.com/ericzzj1989/BALF">code</a>
-            <p></p>
-            A simple yet both efficient and effective motion blur aware local feature detector.
-            <p></p>
-          </td>
-        </tr>
-          
-        <tr onmouseout="vio_stop()" onmouseover="vio_start()">  
-          <td width="25%">
-            <div class="preview-wrapper">
-              <div class="preview-overlay" id="vio_shape">
-                <video muted autoplay loop playsinline>
-                  <source src="media/vio_demo.mp4" type="video/mp4">
-                </video>
-              </div>
-              <img src="media/vio_teaser.png" class="preview-image">
-            </div>   
-            <script type="text/javascript">
-              function vio_start() { 
-                document.getElementById('vio_shape').style.opacity = "1";
-              }
-              function vio_stop() { 
-                document.getElementById('vio_shape').style.opacity = "0"; 
-              }
-              vio_stop()
-            </script>
-          </td>
+          </div>
+          <div class="paper-desc">
+            A simple yet efficient and effective motion blur aware local feature detector.
+          </div>
+        </div>
+      </div>
 
-          <td valign="top" width="75%">
-            <a href="https://ieeexplore.ieee.org/abstract/document/10240505">
-              <papertitle>
-                Benchmark for Evaluating Initialization of Visual-Inertial Odometry
-              </papertitle>
-            </a>
-            <br>
+      <!-- VIO Benchmark -->
+      <div class="paper" data-id="vio" data-selected="false">
+        <div class="paper-thumb">
+          <img src="media/vio_teaser.png" alt="VIO Benchmark">
+          <div class="thumb-hover">
+            <video muted autoplay loop playsinline src="media/vio_demo.mp4"></video>
+          </div>
+        </div>
+        <div class="paper-info">
+          <a class="paper-title" href="https://ieeexplore.ieee.org/abstract/document/10240505">
+            Benchmark for Evaluating Initialization of Visual-Inertial Odometry
+          </a>
+          <div class="paper-authors">
             <strong>Zhenjun Zhao</strong>,
             <a href="https://www.mae.cuhk.edu.hk/~bmchen/">Ben M. Chen</a>
-            <br>
+          </div>
+          <div class="paper-venue">
             <em>Chinese Control Conference (<strong>CCC</strong>)</em>, 2023
-            <br>
-            <a href="https://ieeexplore.ieee.org/abstract/document/10240505">paper</a> |
+          </div>
+          <div class="paper-links">
+            <a href="https://ieeexplore.ieee.org/abstract/document/10240505">paper</a>
             <a href="https://github.com/ericzzj1989/vio_initialization_evaluation">code</a>
-            <p></p>
-            A novel benchmark for the evaluation of the initialization of visual-inertial odometry (VIO).
-            <p></p>
-          </td>
-        </tr>
-  
-        <tr onmouseout="hkworld_stop()" onmouseover="hkworld_start()">  
-          <td width="25%">
-            <div class="one">
-              <div class="two" id = 'hkworld_shape'>
-                <img src='media/hkworld_output.png' width="180" height="120">
-              </div>
-                <img src='media/hkworld_input.png' width="180" height="120">
-            </div>
-            <script type="text/javascript">
-              function hkworld_start() { 
-                document.getElementById('hkworld_shape').style.opacity = "1";
-              }
-              function hkworld_stop() { 
-                document.getElementById('hkworld_shape').style.opacity = "0"; 
-              }
-              hkworld_stop()
-            </script>
-          </td>
-          <td valign="top" width="75%">
-            <a href="https://ieeexplore.ieee.org/abstract/document/10124374">
-              <papertitle>
-                Hong Kong World: Leveraging Structural Regularity for Line-based SLAM
-              </papertitle>
-            </a>
-            <br>
+          </div>
+          <div class="paper-desc">
+            A novel benchmark for the evaluation of visual-inertial odometry (VIO) initialization.
+          </div>
+        </div>
+      </div>
+
+      <!-- Hong Kong World -->
+      <div class="paper" data-id="hkworld" data-selected="false">
+        <div class="paper-thumb">
+          <img src="media/hkworld_input.png" alt="Hong Kong World">
+          <div class="thumb-hover">
+            <img src="media/hkworld_output.png" alt="Hong Kong World output">
+          </div>
+        </div>
+        <div class="paper-info">
+          <a class="paper-title" href="https://ieeexplore.ieee.org/abstract/document/10124374">
+            Hong Kong World: Leveraging Structural Regularity for Line-based SLAM
+          </a>
+          <div class="paper-authors">
             <a href="https://sites.google.com/view/haoangli/homepage">Haoang Li</a>,
             <a href="https://sites.google.com/site/drjizhao/">Ji Zhao</a>,
             <a href="https://www.linkedin.com/in/jcbazin/">Jean-Charles Bazin</a>,
@@ -717,45 +649,32 @@
             <a href="https://unist.info/">Kyungdon Joo</a>,
             <strong>Zhenjun Zhao</strong>,
             <a href="https://scholar.google.com.hk/citations?user=WzmDQTMAAAAJ&hl=en">Yun-Hui Liu</a>
-            <br>
+          </div>
+          <div class="paper-venue">
             <em>IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>TPAMI</strong>)</em>, 2023
-            <br>
+          </div>
+          <div class="paper-links">
             <a href="https://ieeexplore.ieee.org/abstract/document/10124374">paper</a>
-            <p></p>
-            A novel structural model called Hong Kong world to describe the structured scenes with vertical, horizontal and sloping dominant directions.
-            <p></p>
-          </td>
-        </tr>
-    
-        <tr onmouseout="syreanet_stop()" onmouseover="syreanet_start()">  
-          <td width="25%">
-            <div class="preview-wrapper">
-              <div class="preview-overlay" id="syreanet_shape">
-                <video muted autoplay loop playsinline>
-                  <source src="media/syreanet_demo.mp4" type="video/mp4">
-                </video>
-              </div>
-              <img src="media/syreanet_teaser.png" class="preview-image">
-            </div>
+          </div>
+          <div class="paper-desc">
+            A novel structural model to describe structured scenes with vertical, horizontal, and sloping dominant directions.
+          </div>
+        </div>
+      </div>
 
-            <script type="text/javascript">
-              function syreanet_start() { 
-                document.getElementById('syreanet_shape').style.opacity = "1";
-              }
-              function syreanet_stop() { 
-                document.getElementById('syreanet_shape').style.opacity = "0"; 
-              }
-              syreanet_stop()
-            </script>
-          </td>
-
-          <td valign="top" width="75%">
-            <a href="https://arxiv.org/abs/2302.08269">
-              <papertitle>
-                SyreaNet: A Physically Guided Underwater Image Enhancement Framework Integrating Synthetic and Real Images
-              </papertitle>
-            </a>
-            <br>
+      <!-- SyreaNet -->
+      <div class="paper" data-id="syreanet" data-selected="false">
+        <div class="paper-thumb">
+          <img src="media/syreanet_teaser.png" alt="SyreaNet">
+          <div class="thumb-hover">
+            <video muted autoplay loop playsinline src="media/syreanet_demo.mp4"></video>
+          </div>
+        </div>
+        <div class="paper-info">
+          <a class="paper-title" href="https://arxiv.org/abs/2302.08269">
+            SyreaNet: A Physically Guided Underwater Image Enhancement Framework Integrating Synthetic and Real Images
+          </a>
+          <div class="paper-authors">
             <a href="https://github.com/RockWenJJ">Junjie Wen</a>,
             <a href="https://jinqiang.github.io/">Jinqiang Cui</a>,
             <strong>Zhenjun Zhao</strong>,
@@ -763,96 +682,94 @@
             <a href="https://gaozhinuswhu.com/">Zhi Gao</a>,
             <a href="https://ieeexplore.ieee.org/author/37324043000">Lihua Dou</a>,
             <a href="https://www.mae.cuhk.edu.hk/~bmchen/">Ben M. Chen</a>
-            <br>
+          </div>
+          <div class="paper-venue">
             <em>IEEE International Conference on Robotics and Automation (<strong>ICRA</strong>)</em>, 2023
-            <br>
-            <a href="https://arxiv.org/abs/2302.08269">paper</a> |
-            <a href="https://youtu.be/DyOktx7_9JQ">video</a> |
-            <a href="files/syreanet_poster.pdf">poster</a> |
+          </div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2302.08269">paper</a>
+            <a href="https://youtu.be/DyOktx7_9JQ">video</a>
+            <a href="files/syreanet_poster.pdf">poster</a>
             <a href="https://github.com/RockWenJJ/SyreaNet">code</a>
-            <p></p>
-            A novel UIE framework combining both synthetic and real data under the guidance of the revised underwater image formation model and DA strategies.
-            <p></p>
-          </td>
-        </tr>
-    </table>
-    <br>
-    <br>
+          </div>
+          <div class="paper-desc">
+            A novel UIE framework combining synthetic and real data guided by the revised underwater image formation model and domain adaptation strategies.
+          </div>
+        </div>
+      </div>
 
-      <!-- Teaching -->
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <heading>Teaching</heading>
-          <tr>
-            <td style="padding:0px;width:25%;vertical-align:middle">
-              <img src="media/cuhk_logo.jpg" width="180">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              Co-supervisor, <strong>Undergraduate Final Year Project</strong>, 2019-2020
-              <br>
-              Co-supervisor, <strong>MSc Project</strong>, 2019-2020
-              <br>
-              Teaching Assistant, <a href="https://www.se.cuhk.edu.hk/programmes/undergraduate-programmes/engg1130-estr1006-multivariable-calculus-for-engineers/"><strong>Multivariable Calculus for Engineers</strong></a>, Spring 2021
-              <br>
-              Teaching Assistant, <a href="https://www.cse.cuhk.edu.hk/academics/ug-course-list/engg2720/"><strong>Complex Variables for Engineers</strong></a>, Fall 2020
-              <br>
-              Teaching Assistant, <strong>Probability and Statistics for Engineers</strong>, Spring 2020
-              <br>
-              Teaching Assistant (Lead), <strong>Introduction to Control Systems</strong>, Fall 2019
-              <br>
-            </td>
-          </tr>
-      </table>
-      <br>
-      <br>
+    </div><!-- #papers -->
+  </section>
 
-      <!-- Academic Services -->
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <heading>Academic Services</heading>
-          <tr>
-            <td>
-              <ul>
-                <li> <strong>Conference Reviewer</strong>: CVPR, ICCV, ICML, NeurIPS, ICLR, ICRA, 3DV</li>
-                <li> <strong>Journal Reviewer</strong>: TPAMI, IJCV</li>
-              </ul>
-            </td>
-          </tr>
-      </table>
+  <!-- ── Teaching ── -->
+  <section>
+    <h2>Teaching</h2>
+    <div class="teaching-row">
+      <img src="media/cuhk_logo.jpg" alt="CUHK">
+      <ul class="teaching-list">
+        <li>Co-supervisor, <strong>Undergraduate Final Year Project</strong>, 2019–2020</li>
+        <li>Co-supervisor, <strong>MSc Project</strong>, 2019–2020</li>
+        <li>Teaching Assistant, <a href="https://www.se.cuhk.edu.hk/programmes/undergraduate-programmes/engg1130-estr1006-multivariable-calculus-for-engineers/"><strong>Multivariable Calculus for Engineers</strong></a>, Spring 2021</li>
+        <li>Teaching Assistant, <a href="https://www.cse.cuhk.edu.hk/academics/ug-course-list/engg2720/"><strong>Complex Variables for Engineers</strong></a>, Fall 2020</li>
+        <li>Teaching Assistant, <strong>Probability and Statistics for Engineers</strong>, Spring 2020</li>
+        <li>Teaching Assistant (Lead), <strong>Introduction to Control Systems</strong>, Fall 2019</li>
+      </ul>
+    </div>
+  </section>
 
+  <!-- ── Academic Services ── -->
+  <section>
+    <h2>Academic Services</h2>
+    <ul class="service-list">
+      <li><strong>Conference Reviewer</strong>: CVPR, ICCV, ECCV, ICML, NeurIPS, ICLR, ICRA, BMVC, 3DV, WACV</li>
+      <li><strong>Journal Reviewer</strong>: TPAMI, IJCV</li>
+    </ul>
+  </section>
 
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tr>
-        <td>
-        <br>
-        <p align="right">
-          <font size="2">
-          template adapted from <a href="https://jonbarron.info/"><font size="2">this awesome website</font></a>
-        </font>
-        </p>
-        </td>
-      </tr>
-      </table>
-      <script type="text/javascript">
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  <footer>
+    Template adapted from <a href="https://jonbarron.info/">this awesome website</a>
+  </footer>
 
-      </script> <script type="text/javascript">
-      try {
-          var pageTracker = _gat._getTracker("UA-116734954-1");
-          pageTracker._trackPageview();
-          } catch(err) {}
-      </script>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
+</div><!-- .container -->
+
+<script>
+  // ── News toggle ──
+  function toggleNews() {
+    const older = document.querySelectorAll('.news-old');
+    const btn = document.getElementById('show-more-news');
+    const hidden = older[0].style.display === 'none';
+    older.forEach(el => el.style.display = hidden ? 'list-item' : 'none');
+    btn.textContent = hidden ? '▾ show less' : '▸ show more';
+  }
+
+  // ── Paper filter ──
+  function filterPapers(mode, btn) {
+    // update tab UI
+    document.querySelectorAll('.pub-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+
+    // show/hide papers
+    document.querySelectorAll('.paper').forEach(paper => {
+      if (mode === 'all') {
+        paper.style.display = 'flex';
+      } else {
+        paper.style.display = paper.dataset.selected === 'true' ? 'flex' : 'none';
+      }
+    });
+  }
+
+  // init: show only selected
+  filterPapers('selected', document.querySelector('.pub-tab'));
+</script>
+
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116734954-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-116734954-1');
 </script>
-    </td>
-    </tr>
-  </table>
-  </body>
+
+</body>
 </html>
-<!--  -->
