@@ -127,6 +127,10 @@
       display: block;
       border-radius: 3px;
     }
+    .paper-thumb.wide img {
+      object-fit: contain;
+      background: #fff;
+    }
     .paper-thumb .thumb-hover {
       position: absolute;
       inset: 0;
@@ -253,7 +257,7 @@
 
       <!-- ULF-Loc -->
       <div class="paper" data-id="ulfloc" data-selected="false">
-        <div class="paper-thumb">
+        <div class="paper-thumb wide">
           <img src="media/ulfloc_teaser.png" alt="ULF-Loc">
           <div class="thumb-hover">
             <img src="media/ulfloc_teaser.png" alt="ULF-Loc">
